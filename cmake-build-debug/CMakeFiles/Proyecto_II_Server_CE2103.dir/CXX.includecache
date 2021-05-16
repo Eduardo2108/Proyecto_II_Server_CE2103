@@ -9,8 +9,6 @@
 /home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/main.cpp
 iostream
 -
-src/BPGame/Pathfinding/Route.h
-/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/src/BPGame/Pathfinding/Route.h
 src/BPGame/Pathfinding/Pathfinding.h
 /home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/src/BPGame/Pathfinding/Pathfinding.h
 src/BPGame/Components/Field.h

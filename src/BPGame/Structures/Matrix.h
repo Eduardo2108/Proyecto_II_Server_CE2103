@@ -66,7 +66,7 @@ public:
             temp = (c->isHasBall()) ? "x" : "-";
         }
         if (dynamic_cast<BoundBox *>(c) != nullptr) {
-            temp = "*";
+            temp = (c->isHasBall()) ? "x" : "*";
         }
         return temp;
     }

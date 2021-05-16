@@ -11,7 +11,7 @@
 class Route {
 
 private:
-    LinkedList<Box *> *route;
+    LinkedList<Box *> *route = new LinkedList<Box *>();
 public:
     const LinkedList<Box *> *getRoute() const {
         return route;
@@ -27,6 +27,16 @@ public:
 
     Box *getLast() {
         return this->route->get(this->route->len - 1);
+    }
+
+    void show() {
+        cout << "---- Route ----" << endl;
+        for (int i = 0; i < this->route->len; ++i) {
+            cout << i << " --> ";
+            route->get(i)->show();
+        }
+        cout << "---- ---- ----" << endl;
+
     }
 };
 

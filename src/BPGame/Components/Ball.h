@@ -12,7 +12,7 @@ public:
 
 private:
     //posicion en i
-    int row = 2;
+    int row = 5;
     // posicion en j
     int column = 2;
 public:
