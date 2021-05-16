@@ -46,6 +46,7 @@ class Path {
     int start_x;
     int start_y;
 public:
+
     int getStartX() const {
         return start_x;
     }
@@ -93,8 +94,7 @@ public:
         int row = ball->getRow();
         int x_movement = ball->getXMovement();
         int y_movement = ball->getYMovement();
-
-
+        auto *route = new Route();
         while (x_movement != 0 or y_movement != 0) {
             cout << "Ball x position: " << column << endl;
             cout << "Ball y position: " << row << endl;
@@ -112,9 +112,8 @@ public:
                 row++;
                 y_movement--;
             }
-            cout << "New Ball x position: " << column << endl;
-            cout << "New Ball y position: " << row << endl;
-            cout << "--------------------" << endl;
+            cout << "Casilla a revisar: " << "( " << row << ", " << column << ")" << endl;
+            Box *box = matrix->get(row, column);
         }
         cout << "Final Ball x position: " << column << endl;
         cout << "Final Ball y position: " << row << endl;

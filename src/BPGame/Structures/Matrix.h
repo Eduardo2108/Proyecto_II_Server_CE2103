@@ -26,10 +26,13 @@ public:
         this->columns = columns;
         this->list = new LinkedList<LinkedList<Box *> *>();
         //add the horizontal rows
-        for (int i = 0; i < rows; i++) {
+        for (int i = 1; i <= rows; i++) {
             auto *newRow = new LinkedList<Box *>();
-            for (int j = 0; j < columns; j++) {
-                newRow->append(new NormalBox());
+            for (int j = 1; j <= columns; j++) {
+                NormalBox *new_element = new NormalBox();
+                new_element->setRow(i);
+                new_element->setColumn(j);
+                newRow->append(new_element);
             }
             this->list->append((newRow));
         }
@@ -72,13 +75,27 @@ public:
         if (this->rows == 0 and this->columns == 0)
             cout << "[]" << endl;
         else {
-            for (int i = 0; i < this->rows; ++i) {
-                for (int j = 0; j < this->columns; ++j) {
+            for (int i = 0; i < this->rows; i++) {
+                for (int j = 0; j < this->columns; j++) {
                     cout << getBoxType(this->list->get(i)->get(j)) << " ";
                 }
                 cout << endl;
             }
         }
+    }
+
+    Box *get(int row, int column) {
+        Box *result;
+        if (this->rows == 0 and this->columns == 0)
+            result = nullptr;
+        else {
+            for (int i = 0; i < row; i++) {
+                for (int j = 0; j < column; j++) {
+                    result = this->list->get(i)->get(j);
+                }
+            }
+        }
+        return result;
     }
 };
 
