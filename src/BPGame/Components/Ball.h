@@ -5,6 +5,10 @@
 #ifndef PROYECTO_II_SERVER_CE2103_BALL_H
 #define PROYECTO_II_SERVER_CE2103_BALL_H
 
+#include <iostream>
+#include "string"
+
+using namespace std;
 
 class Ball {
 private:

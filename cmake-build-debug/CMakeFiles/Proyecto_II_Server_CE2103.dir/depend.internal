@@ -3,6 +3,7 @@
 
 CMakeFiles/Proyecto_II_Server_CE2103.dir/main.cpp.o
  /home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/main.cpp
+ /home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/src/BPGame/BPManager.h
  /home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/src/BPGame/Components/Ball.h
  /home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/src/BPGame/Components/Box/BoundBox.h
  /home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/src/BPGame/Components/Box/Box.h
@@ -10,6 +11,8 @@ CMakeFiles/Proyecto_II_Server_CE2103.dir/main.cpp.o
  /home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/src/BPGame/Components/Box/NormalBox.h
  /home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/src/BPGame/Components/Box/ObstacleBox.h
  /home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/src/BPGame/Components/Field.h
+ /home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/src/BPGame/Components/GameSettings.h
+ /home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/src/BPGame/Components/Player.h
  /home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/src/BPGame/Pathfinding/Pathfinding.h
  /home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/src/BPGame/Pathfinding/Route.h
  /home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/src/BPGame/Structures/LinkedList.h

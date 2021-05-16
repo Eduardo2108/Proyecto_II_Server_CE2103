@@ -1,24 +1,13 @@
-#include <iostream>
-#include "src/BPGame/Pathfinding/Pathfinding.h"
-#include "src/BPGame/Components/Field.h"
+#include "src/BPGame/BPManager.h"
 
 int main() {
-    auto *f = new Field(9, 18);
-    f->generateField();
-    Matrix *m = f->getMatrix();
-    m->get(5, 2)->setHasBall(true);
-    m->show();
-    cout << endl << "----------" << endl;
-
-    auto *shoot = new Shoot();shoot->setStrength(50);
+    GameSettings *settings = new GameSettings();
+    settings->setPlayer1Name("Edu")->setPlayer2Name("Jose")->setObstacles(19)->setMaxGoals(3);
+    BPManager *bp = new BPManager(settings);
+    auto *shoot = new Shoot();
+    shoot->setStrength(3);
     shoot->setDirX(1);
     shoot->setDirY(0);
-    shoot->setStrength(50);
-    Ball *ball = new Ball();
-    Route *r = Pathfinding::calculateShoot(shoot, m, ball);
-    ball->show();
-    r->show();
-    m->show();
-
+    bp->shoot(shoot)->show();
     return 0;
 }

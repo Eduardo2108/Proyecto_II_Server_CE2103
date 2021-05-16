@@ -11,15 +11,19 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4433d522-a850-462d-badf-29cfc3291e1a" name="Default Changelist" comment="Added get method for the matrix.">
+    <list default="true" id="4433d522-a850-462d-badf-29cfc3291e1a" name="Default Changelist" comment="Added check for the border lines and the goal line">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Proyecto_II_Server_CE2103.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Proyecto_II_Server_CE2103.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Proyecto_II_Server_CE2103.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Proyecto_II_Server_CE2103.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Proyecto_II_Server_CE2103.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Proyecto_II_Server_CE2103.dir/depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Proyecto_II_Server_CE2103" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Proyecto_II_Server_CE2103" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BPGame/BPManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/BPGame/BPManager.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BPGame/Components/Ball.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/BPGame/Components/Ball.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BPGame/Components/Field.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/BPGame/Components/Field.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BPGame/Components/GameSettings.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/BPGame/Components/GameSettings.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BPGame/Pathfinding/Pathfinding.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/BPGame/Pathfinding/Pathfinding.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BPGame/Pathfinding/Route.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/BPGame/Pathfinding/Route.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BPGame/Structures/Matrix.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/BPGame/Structures/Matrix.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +61,7 @@
     <property name="cf.first.check.clang-format" value="false" />
     <property name="cidr.known.project.marker" value="true" />
     <property name="cmake.loaded.for.project" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RunManager">
     <configuration name="Proyecto_II_Server_CE2103" type="CMakeRunConfiguration" factoryName="Application" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Proyecto_II_Server_CE2103" TARGET_NAME="Proyecto_II_Server_CE2103" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Proyecto_II_Server_CE2103" RUN_TARGET_NAME="Proyecto_II_Server_CE2103">
@@ -91,7 +96,7 @@
       <workItem from="1621122734567" duration="1056000" />
       <workItem from="1621137206866" duration="2953000" />
       <workItem from="1621140184515" duration="4647000" />
-      <workItem from="1621201023572" duration="2146000" />
+      <workItem from="1621201023572" duration="3895000" />
     </task>
     <task id="LOCAL-00001" summary="Added ball settings for the shoot's speed and direction .">
       <created>1621139336491</created>
@@ -114,7 +119,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621141373392</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added check for the border lines and the goal line">
+      <created>1621206007340</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1621206007341</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,6 +148,7 @@
     <MESSAGE value="Added ball settings for the shoot's speed and direction ." />
     <MESSAGE value="Added calculations of how many fields in the matrix the ball moves, still pending to modify the value in order of the matrix." />
     <MESSAGE value="Added get method for the matrix." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added get method for the matrix." />
+    <MESSAGE value="Added check for the border lines and the goal line" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added check for the border lines and the goal line" />
   </component>
 </project>

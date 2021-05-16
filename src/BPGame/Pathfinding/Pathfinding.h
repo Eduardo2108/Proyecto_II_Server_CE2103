@@ -9,6 +9,7 @@
 #include "string"
 #include "../Structures/Matrix.h"
 #include "../Components/Ball.h"
+#include "../Components/Field.h"
 
 class Shoot {
     int strength;
@@ -87,7 +88,8 @@ private:
 
 class Pathfinding {
 public:
-    static Route *calculateShoot(Shoot *shoot, Matrix *matrix, Ball *ball) {
+    static Route *calculateShoot(Shoot *shoot, Field *field, Ball *ball) {
+        Matrix *matrix = field->getMatrix();
         //SET THE BALL MOVEMENT
         setMovement(ball, shoot);
         int column = ball->getColumn();
@@ -95,6 +97,7 @@ public:
         int x_movement = ball->getXMovement();
         int y_movement = ball->getYMovement();
         auto *route = new Route();
+        field->setBall(false, row, column);
         while (x_movement != 0 or y_movement != 0) {
             if (x_movement < 0) {
                 column--;

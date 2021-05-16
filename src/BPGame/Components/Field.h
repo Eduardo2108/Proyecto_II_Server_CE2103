@@ -19,18 +19,17 @@ using namespace std;
 class Field {
 private:
     Matrix *matrix;
-    int length;
-    int height;
+    int length = 9;
+    int height = 18;
 
 public:
-    Field(int height, int length) {
+    Field() {
         this->height = height;
         this->length = length;
         this->matrix = new Matrix(this->height, this->length);
     }
 
-    void generateField() {
-
+    void generateField(int obstacles) {
 
         for (int i = 1; i <= this->length; i++) {
             matrix->add(1, i, new BoundBox());
@@ -54,6 +53,10 @@ public:
 
     Matrix *getMatrix() {
         return this->matrix;
+    }
+
+    void setBall(bool hasBall, int row, int column) {
+        matrix->get(row, column)->setHasBall(hasBall);
     }
 };
 
