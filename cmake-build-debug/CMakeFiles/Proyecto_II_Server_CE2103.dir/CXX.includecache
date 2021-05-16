@@ -11,10 +11,40 @@ iostream
 -
 src/BPGame/Pathfinding/Route.h
 /home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/src/BPGame/Pathfinding/Route.h
+src/BPGame/Pathfinding/Pathfinding.h
+/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/src/BPGame/Pathfinding/Pathfinding.h
+
+/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/src/BPGame/Components/Ball.h
+
+/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/src/BPGame/Components/Box/BoundBox.h
+Box.h
+/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/src/BPGame/Components/Box/Box.h
 
 /home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/src/BPGame/Components/Box/Box.h
 ostream
 -
+
+/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/src/BPGame/Components/Box/GoalLineBox.h
+Box.h
+/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/src/BPGame/Components/Box/Box.h
+
+/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/src/BPGame/Components/Box/NormalBox.h
+Box.h
+/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/src/BPGame/Components/Box/Box.h
+
+/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/src/BPGame/Components/Box/ObstacleBox.h
+Box.h
+/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/src/BPGame/Components/Box/Box.h
+
+/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/src/BPGame/Pathfinding/Pathfinding.h
+Route.h
+/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/src/BPGame/Pathfinding/Route.h
+string
+/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/src/BPGame/Pathfinding/string
+../Structures/Matrix.h
+/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/src/BPGame/Structures/Matrix.h
+../Components/Ball.h
+/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/src/BPGame/Components/Ball.h
 
 /home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/src/BPGame/Pathfinding/Route.h
 ../Structures/LinkedList.h
@@ -23,4 +53,18 @@ ostream
 /home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/src/BPGame/Components/Box/Box.h
 
 /home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/src/BPGame/Structures/LinkedList.h
+
+/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/src/BPGame/Structures/Matrix.h
+LinkedList.h
+/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/src/BPGame/Structures/LinkedList.h
+../Components/Box/Box.h
+/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/src/BPGame/Components/Box/Box.h
+../Components/Box/NormalBox.h
+/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/src/BPGame/Components/Box/NormalBox.h
+../Components/Box/ObstacleBox.h
+/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/src/BPGame/Components/Box/ObstacleBox.h
+../Components/Box/GoalLineBox.h
+/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/src/BPGame/Components/Box/GoalLineBox.h
+../Components/Box/BoundBox.h
+/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/src/BPGame/Components/Box/BoundBox.h
 

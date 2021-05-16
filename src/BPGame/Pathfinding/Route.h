@@ -16,12 +16,15 @@ public:
     const LinkedList<Box *> *getRoute() const {
         return route;
     }
+
     void addStep(Box *box) {
         this->route->append(box);
     }
+
     Box *getFirst() {
         return this->route->get(0);
     }
+
     Box *getLast() {
         return this->route->get(this->route->len - 1);
     }

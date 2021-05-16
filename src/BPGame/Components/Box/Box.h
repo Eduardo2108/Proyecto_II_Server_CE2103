@@ -14,6 +14,27 @@ private:
     int pos_x;
     //Position to draw the box in
     int pos_y;
+
+    //
+    int row;
+    int column;
+public:
+    int getRow() const {
+        return row;
+    }
+
+    void setRow(int row) {
+        Box::row = row;
+    }
+
+    int getColumn() const {
+        return column;
+    }
+
+    void setColumn(int column) {
+        Box::column = column;
+    }
+
 public:
     virtual ~Box() = default;
     friend ostream &operator<<(ostream &os, const Box &box) {

@@ -2,11 +2,11 @@
 // Created by eduardozumbadog on 5/14/21.
 //
 #include "LinkedList.h"
-#include "../Box/Box.h"
-#include "../Box/NormalBox.h"
-#include "../Box/ObstacleBox.h"
-#include "../Box/GoalLineBox.h"
-#include "../Box/BoundBox.h"
+#include "../Components/Box/Box.h"
+#include "../Components/Box/NormalBox.h"
+#include "../Components/Box/ObstacleBox.h"
+#include "../Components/Box/GoalLineBox.h"
+#include "../Components/Box/BoundBox.h"
 
 #ifndef BACKEND_MATRIX_H
 #define BACKEND_MATRIX_H
@@ -53,16 +53,16 @@ public:
 
     string getBoxType(Box *c) {
         string temp;
-        if (dynamic_cast<GoalLineBox*>(c) != nullptr) {
+        if (dynamic_cast<GoalLineBox *>(c) != nullptr) {
             temp = "|";
         }
-        if (dynamic_cast<ObstacleBox*>(c) != nullptr) {
+        if (dynamic_cast<ObstacleBox *>(c) != nullptr) {
             temp = "O";
         }
-        if (dynamic_cast<NormalBox*>(c) != nullptr) {
+        if (dynamic_cast<NormalBox *>(c) != nullptr) {
             temp = "-";
         }
-        if (dynamic_cast<BoundBox*>(c) != nullptr) {
+        if (dynamic_cast<BoundBox *>(c) != nullptr) {
             temp = "*";
         }
         return temp;
@@ -73,10 +73,10 @@ public:
             cout << "[]" << endl;
         else {
             for (int i = 0; i < this->rows; ++i) {
-                 for (int j = 0; j < this->columns; ++j) {
+                for (int j = 0; j < this->columns; ++j) {
                     cout << getBoxType(this->list->get(i)->get(j)) << " ";
                 }
-                cout <<   endl;
+                cout << endl;
             }
         }
     }
