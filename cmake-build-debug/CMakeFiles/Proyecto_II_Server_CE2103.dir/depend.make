@@ -8,6 +8,7 @@ CMakeFiles/Proyecto_II_Server_CE2103.dir/main.cpp.o: ../src/BPGame/Components/Bo
 CMakeFiles/Proyecto_II_Server_CE2103.dir/main.cpp.o: ../src/BPGame/Components/Box/GoalLineBox.h
 CMakeFiles/Proyecto_II_Server_CE2103.dir/main.cpp.o: ../src/BPGame/Components/Box/NormalBox.h
 CMakeFiles/Proyecto_II_Server_CE2103.dir/main.cpp.o: ../src/BPGame/Components/Box/ObstacleBox.h
+CMakeFiles/Proyecto_II_Server_CE2103.dir/main.cpp.o: ../src/BPGame/Components/Field.h
 CMakeFiles/Proyecto_II_Server_CE2103.dir/main.cpp.o: ../src/BPGame/Pathfinding/Pathfinding.h
 CMakeFiles/Proyecto_II_Server_CE2103.dir/main.cpp.o: ../src/BPGame/Pathfinding/Route.h
 CMakeFiles/Proyecto_II_Server_CE2103.dir/main.cpp.o: ../src/BPGame/Structures/LinkedList.h

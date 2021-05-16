@@ -11,10 +11,18 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4433d522-a850-462d-badf-29cfc3291e1a" name="Default Changelist" comment="Added calculations of how many fields in the matrix the ball moves, still pending to modify the value in order of the matrix.">
+    <list default="true" id="4433d522-a850-462d-badf-29cfc3291e1a" name="Default Changelist" comment="Added get method for the matrix.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Proyecto_II_Server_CE2103.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Proyecto_II_Server_CE2103.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Proyecto_II_Server_CE2103.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Proyecto_II_Server_CE2103.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Proyecto_II_Server_CE2103.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Proyecto_II_Server_CE2103.dir/depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Proyecto_II_Server_CE2103" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Proyecto_II_Server_CE2103" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Proyecto_II_Server_CE2103.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Proyecto_II_Server_CE2103.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BPGame/Components/Ball.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/BPGame/Components/Ball.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BPGame/Components/Box/Box.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/BPGame/Components/Box/Box.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BPGame/Pathfinding/Pathfinding.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/BPGame/Pathfinding/Pathfinding.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BPGame/Structures/Matrix.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/BPGame/Structures/Matrix.h" afterDir="false" />
     </list>
@@ -29,6 +37,14 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="1satrfgAKiOFCIEzpRCwOkGzV3U" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -48,6 +64,11 @@
     <property name="cmake.loaded.for.project" value="true" />
   </component>
   <component name="RunManager">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Proyecto_II_Server_CE2103" type="CMakeRunConfiguration" factoryName="Application" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Proyecto_II_Server_CE2103" TARGET_NAME="Proyecto_II_Server_CE2103" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Proyecto_II_Server_CE2103" RUN_TARGET_NAME="Proyecto_II_Server_CE2103">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -74,7 +95,7 @@
       <updated>1621122728810</updated>
       <workItem from="1621122734567" duration="1056000" />
       <workItem from="1621137206866" duration="2953000" />
-      <workItem from="1621140184515" duration="1178000" />
+      <workItem from="1621140184515" duration="4647000" />
     </task>
     <task id="LOCAL-00001" summary="Added ball settings for the shoot's speed and direction .">
       <created>1621139336491</created>
@@ -90,7 +111,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621140354663</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added get method for the matrix.">
+      <created>1621141373392</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1621141373392</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -111,6 +139,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added ball settings for the shoot's speed and direction ." />
     <MESSAGE value="Added calculations of how many fields in the matrix the ball moves, still pending to modify the value in order of the matrix." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added calculations of how many fields in the matrix the ball moves, still pending to modify the value in order of the matrix." />
+    <MESSAGE value="Added get method for the matrix." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added get method for the matrix." />
   </component>
 </project>

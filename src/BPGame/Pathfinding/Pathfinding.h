@@ -96,25 +96,25 @@ public:
         int y_movement = ball->getYMovement();
         auto *route = new Route();
         while (x_movement != 0 or y_movement != 0) {
-            cout << "Ball x position: " << column << endl;
-            cout << "Ball y position: " << row << endl;
             if (x_movement < 0) {
                 column--;
                 x_movement++;
-            } else {
+            } else if (x_movement > 0) {
                 column++;
                 x_movement--;
             }
             if (y_movement < 0) {
-                row--;
-                y_movement++;
-            } else {
                 row++;
+                y_movement++;
+            } else if (y_movement > 0) {
+                row--;
                 y_movement--;
             }
-            cout << "Casilla a revisar: " << "( " << row << ", " << column << ")" << endl;
+            cout << "Casilla a revisar: " << endl;
             Box *box = matrix->get(row, column);
+            box->show();
         }
+        matrix->get(row, column)->setHasBall(true);
         cout << "Final Ball x position: " << column << endl;
         cout << "Final Ball y position: " << row << endl;
     }

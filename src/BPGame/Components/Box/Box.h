@@ -18,7 +18,16 @@ private:
     //
     int row;
     int column;
+    bool hasBall = false;
 public:
+    bool isHasBall() const {
+        return hasBall;
+    }
+
+    void setHasBall(bool hasBall) {
+        this->hasBall = hasBall;
+    }
+
     int getRow() const {
         return row;
     }
@@ -37,6 +46,7 @@ public:
 
 public:
     virtual ~Box() = default;
+
     friend ostream &operator<<(ostream &os, const Box &box) {
         os << "pos_x: " << box.pos_x << " pos_y: " << box.pos_y;
         return os;
@@ -49,6 +59,10 @@ public:
 
     int getPosY() const {
         return pos_y;
+    }
+
+    void show() {
+        cout << "{Row: " << this->row << " Column: " << this->column << " }" << endl;
     }
 };
 

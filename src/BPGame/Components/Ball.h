@@ -8,10 +8,13 @@
 
 class Ball {
 private:
+public:
+
+private:
     //posicion en i
-    int row;
+    int row = 2;
     // posicion en j
-    int column;
+    int column = 2;
 public:
     int getYMovement() const {
         return y_movement;

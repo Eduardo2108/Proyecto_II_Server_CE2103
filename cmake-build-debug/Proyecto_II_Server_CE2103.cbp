@@ -91,6 +91,9 @@
 		<Unit filename="/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/src/BPGame/Components/Ball.h">
 			<Option target="Proyecto_II_Server_CE2103"/>
 		</Unit>
+		<Unit filename="/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/src/BPGame/Components/Field.h">
+			<Option target="Proyecto_II_Server_CE2103"/>
+		</Unit>
 		<Unit filename="/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/src/BPGame/Components/GameSettings.h">
 			<Option target="Proyecto_II_Server_CE2103"/>
 		</Unit>

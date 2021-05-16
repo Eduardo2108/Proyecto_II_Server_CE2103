@@ -45,12 +45,12 @@ public:
      * @param element to be added on the matrix
      */
     void add(int row, int column, Box *element) {
-        if (row >= this->rows or column >= this->columns) {
+        if (row > this->rows or column > this->columns) {
             cerr << "Element: " << element << " not added, index out of range" << endl;
             return;
         } else {
-            LinkedList<Box *> *matrix_row = this->list->get(row);
-            matrix_row->append(element, column);
+            LinkedList<Box *> *matrix_row = this->list->get(row - 1);
+            matrix_row->append(element, column - 1);
         }
     }
 
@@ -63,7 +63,7 @@ public:
             temp = "O";
         }
         if (dynamic_cast<NormalBox *>(c) != nullptr) {
-            temp = "-";
+            temp = (c->isHasBall()) ? "x" : "-";
         }
         if (dynamic_cast<BoundBox *>(c) != nullptr) {
             temp = "*";

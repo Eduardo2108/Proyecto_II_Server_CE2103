@@ -13,6 +13,8 @@ src/BPGame/Pathfinding/Route.h
 /home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/src/BPGame/Pathfinding/Route.h
 src/BPGame/Pathfinding/Pathfinding.h
 /home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/src/BPGame/Pathfinding/Pathfinding.h
+src/BPGame/Components/Field.h
+/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/src/BPGame/Components/Field.h
 
 /home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/src/BPGame/Components/Ball.h
 
@@ -35,6 +37,22 @@ Box.h
 /home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/src/BPGame/Components/Box/ObstacleBox.h
 Box.h
 /home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/src/BPGame/Components/Box/Box.h
+
+/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/src/BPGame/Components/Field.h
+Box/Box.h
+/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/src/BPGame/Components/Box/Box.h
+Box/NormalBox.h
+/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/src/BPGame/Components/Box/NormalBox.h
+Box/ObstacleBox.h
+/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/src/BPGame/Components/Box/ObstacleBox.h
+Box/GoalLineBox.h
+/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/src/BPGame/Components/Box/GoalLineBox.h
+Box/BoundBox.h
+/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/src/BPGame/Components/Box/BoundBox.h
+string
+/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/src/BPGame/Components/string
+../Structures/Matrix.h
+/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/src/BPGame/Structures/Matrix.h
 
 /home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/src/BPGame/Pathfinding/Pathfinding.h
 Route.h
