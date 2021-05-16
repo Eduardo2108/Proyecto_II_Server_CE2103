@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Proyecto_II_Server_CE2103"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Proyecto_II_Server_CE2103">
+				<Option output="/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/cmake-build-debug/Proyecto_II_Server_CE2103" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-unknown-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/cmake-build-debug/Makefile&quot;  VERBOSE=1 Proyecto_II_Server_CE2103"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Proyecto_II_Server_CE2103/fast">
+				<Option output="/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/cmake-build-debug/Proyecto_II_Server_CE2103" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-unknown-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-unknown-linux-gnu/10.2.0/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/cmake-build-debug/Makefile&quot;  VERBOSE=1 Proyecto_II_Server_CE2103/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/main.cpp">
+			<Option target="Proyecto_II_Server_CE2103"/>
+		</Unit>
+		<Unit filename="/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/src/BPGame/BPManager.h">
+			<Option target="Proyecto_II_Server_CE2103"/>
+		</Unit>
+		<Unit filename="/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/src/BPGame/Components/Ball.h">
+			<Option target="Proyecto_II_Server_CE2103"/>
+		</Unit>
+		<Unit filename="/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/src/BPGame/Components/Field.h">
+			<Option target="Proyecto_II_Server_CE2103"/>
+		</Unit>
+		<Unit filename="/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/src/BPGame/Components/GameSettings.h">
+			<Option target="Proyecto_II_Server_CE2103"/>
+		</Unit>
+		<Unit filename="/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/src/BPGame/Components/Player.h">
+			<Option target="Proyecto_II_Server_CE2103"/>
+		</Unit>
+		<Unit filename="/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/src/BPGame/Pathfinding/Pathfinding.h">
+			<Option target="Proyecto_II_Server_CE2103"/>
+		</Unit>
+		<Unit filename="/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/src/BPGame/Pathfinding/Route.h">
+			<Option target="Proyecto_II_Server_CE2103"/>
+		</Unit>
+		<Unit filename="/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/src/BPGame/Structures/LinkedList.h">
+			<Option target="Proyecto_II_Server_CE2103"/>
+		</Unit>
+		<Unit filename="/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/src/BPGame/Structures/Matrix.h">
+			<Option target="Proyecto_II_Server_CE2103"/>
+		</Unit>
+		<Unit filename="/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
