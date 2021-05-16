@@ -89,7 +89,35 @@ public:
     static Route *calculateShoot(Shoot *shoot, Matrix *matrix, Ball *ball) {
         //SET THE BALL MOVEMENT
         setMovement(ball, shoot);
+        int column = ball->getColumn();
+        int row = ball->getRow();
+        int x_movement = ball->getXMovement();
+        int y_movement = ball->getYMovement();
 
+
+        while (x_movement != 0 or y_movement != 0) {
+            cout << "Ball x position: " << column << endl;
+            cout << "Ball y position: " << row << endl;
+            if (x_movement < 0) {
+                column--;
+                x_movement++;
+            } else {
+                column++;
+                x_movement--;
+            }
+            if (y_movement < 0) {
+                row--;
+                y_movement++;
+            } else {
+                row++;
+                y_movement--;
+            }
+            cout << "New Ball x position: " << column << endl;
+            cout << "New Ball y position: " << row << endl;
+            cout << "--------------------" << endl;
+        }
+        cout << "Final Ball x position: " << column << endl;
+        cout << "Final Ball y position: " << row << endl;
     }
 
     static void setMovement(Ball *ball, Shoot *shoot) {

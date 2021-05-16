@@ -4,7 +4,7 @@
 
 int main() {
     Shoot *shoot = new Shoot();
-    shoot->setDirX(-1);
+    shoot->setDirX(1);
     shoot->setDirY(1);
     shoot->setStrength(10);
     Ball *ball = new Ball();
