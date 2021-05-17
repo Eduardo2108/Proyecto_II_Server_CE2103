@@ -13,7 +13,32 @@ class Route {
 private:
     LinkedList<Box *> *route = new LinkedList<Box *>();
 public:
-    const LinkedList<Box *> *getRoute() const {
+    bool Deserialize(const std::string &s) {
+        rapidjson::Document doc;
+        if (!doc.IsArray())
+            return false;
+        for (rapidjson::Value::ConstValueIterator itr = doc.Begin(); itr != doc.End(); ++itr) {
+            Box *p;
+            p->Deserialize(*itr);
+            this->route->append(p);
+        }
+        return true;
+
+    };
+
+    bool Serialize(rapidjson::Writer<rapidjson::StringBuffer> *writer) const {
+        writer->StartArray();
+
+        for (int i = 0; i < this->route->len; i++) {
+            Box *b = this->route->get(i);
+            (b)->Serialize(writer);
+        }
+        writer->EndArray();
+        return true;
+
+    };
+
+     LinkedList<Box *> *getRoute()  {
         return route;
     }
 

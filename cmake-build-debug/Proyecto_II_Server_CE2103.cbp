@@ -112,6 +112,9 @@
 		<Unit filename="/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/src/BPGame/Structures/Matrix.h">
 			<Option target="Proyecto_II_Server_CE2103"/>
 		</Unit>
+		<Unit filename="/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/src/util/Json.h">
+			<Option target="Proyecto_II_Server_CE2103"/>
+		</Unit>
 		<Unit filename="/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
