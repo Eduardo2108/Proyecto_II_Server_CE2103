@@ -115,6 +115,7 @@ public:
                 row--;
                 y_movement--;
             }
+
             Box *box = matrix->get(row, column);
             if (dynamic_cast<NormalBox *>(box) == nullptr) {
                 if (dynamic_cast<GoalLineBox *>(box) != nullptr) {

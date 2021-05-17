@@ -57,15 +57,16 @@ public:
     string getBoxType(Box *c) {
         string temp;
         if (dynamic_cast<GoalLineBox *>(c) != nullptr) {
-            temp = (c->isHasBall()) ? "x" : "|";        }
+            temp = (c->isHasBall()) ? "0" : "|";
+        }
         if (dynamic_cast<ObstacleBox *>(c) != nullptr) {
             temp = "O";
         }
         if (dynamic_cast<NormalBox *>(c) != nullptr) {
-            temp = (c->isHasBall()) ? "x" : "-";
+            temp = (c->isHasBall()) ? "0" : "-";
         }
         if (dynamic_cast<BoundBox *>(c) != nullptr) {
-            temp = (c->isHasBall()) ? "x" : "*";
+            temp = (c->isHasBall()) ? "0" : "*";
         }
         return temp;
     }
@@ -95,6 +96,10 @@ public:
             }
         }
         return result;
+    }
+
+    bool valid(int i, int i1) {
+        return (this->rows < i and this->columns < i1);
     }
 };
 

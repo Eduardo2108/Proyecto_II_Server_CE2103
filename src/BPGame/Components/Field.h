@@ -45,8 +45,8 @@ public:
         }
         for (int i = 1; i <= this->height; i++) {
             if (i <= 6 and i >= 4) {
-                BoundBox *goal1 = new BoundBox();
-                BoundBox *goal2 = new BoundBox();
+                GoalLineBox *goal1 = new GoalLineBox();
+                GoalLineBox *goal2 = new GoalLineBox();
                 goal1->setRow(i);
                 goal1->setColumn(1);
 
