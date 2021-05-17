@@ -57,8 +57,7 @@ public:
     string getBoxType(Box *c) {
         string temp;
         if (dynamic_cast<GoalLineBox *>(c) != nullptr) {
-            temp = "|";
-        }
+            temp = (c->isHasBall()) ? "x" : "|";        }
         if (dynamic_cast<ObstacleBox *>(c) != nullptr) {
             temp = "O";
         }

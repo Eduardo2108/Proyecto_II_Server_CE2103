@@ -23,6 +23,7 @@ private:
 public:
     Route *shoot(Shoot *shoot) {
         return Pathfinding::calculateShoot(shoot, this->field, this->ball);
+
     }
 
     explicit BPManager(GameSettings *settings) {
