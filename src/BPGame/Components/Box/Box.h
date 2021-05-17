@@ -7,6 +7,10 @@
 
 
 #include <ostream>
+#include "../../../../lib/rapidjson/rapidjson.h"
+#include "../../../../lib/rapidjson/document.h"
+#include "../../../../lib/rapidjson/writer.h"
+#include "../../../../lib/rapidjson/stringbuffer.h"
 
 class Box {
 private:
@@ -46,6 +50,29 @@ public:
 
 public:
     virtual ~Box() = default;
+
+    bool Deserialize(const rapidjson::Value &obj) {
+
+        this->setRow(obj["row"].GetInt());
+        this->setColumn(obj["column"].GetInt());
+
+
+        return true;
+    }
+
+    bool Serialize(rapidjson::Writer<rapidjson::StringBuffer> *writer) {
+        writer->StartObject();
+
+        writer->String("row");
+        writer->Int(this->getRow());
+        writer->String("column");
+        writer->Int(this->getColumn());
+
+
+        writer->EndObject();
+
+        return true;
+    }
 
     friend ostream &operator<<(ostream &os, const Box &box) {
         os << "pos_x: " << box.pos_x << " pos_y: " << box.pos_y;

@@ -4,9 +4,10 @@
 
 #ifndef BACKEND_BOUNDBOX_H
 #define BACKEND_BOUNDBOX_H
+
 #include "Box.h"
 
-class BoundBox: public Box{
+class BoundBox : public Box {
 
 };
 

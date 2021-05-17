@@ -12,6 +12,42 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4433d522-a850-462d-badf-29cfc3291e1a" name="Default Changelist" comment="Added check for the border lines and the goal line">
+      <change afterPath="$PROJECT_DIR$/lib/rapidjson/allocators.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/rapidjson/document.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/rapidjson/encodedstream.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/rapidjson/encodings.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/rapidjson/error/en.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/rapidjson/error/error.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/rapidjson/filereadstream.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/rapidjson/filewritestream.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/rapidjson/fwd.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/rapidjson/internal/biginteger.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/rapidjson/internal/diyfp.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/rapidjson/internal/dtoa.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/rapidjson/internal/ieee754.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/rapidjson/internal/itoa.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/rapidjson/internal/meta.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/rapidjson/internal/pow10.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/rapidjson/internal/regex.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/rapidjson/internal/stack.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/rapidjson/internal/strfunc.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/rapidjson/internal/strtod.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/rapidjson/internal/swap.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/rapidjson/istreamwrapper.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/rapidjson/memorybuffer.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/rapidjson/memorystream.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/rapidjson/msinttypes/inttypes.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/rapidjson/msinttypes/stdint.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/rapidjson/ostreamwrapper.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/rapidjson/pointer.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/rapidjson/prettywriter.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/rapidjson/rapidjson.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/rapidjson/reader.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/rapidjson/schema.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/rapidjson/stream.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/rapidjson/stringbuffer.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/rapidjson/writer.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Proyecto_II_Server_CE2103.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Proyecto_II_Server_CE2103.dir/CXX.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Proyecto_II_Server_CE2103.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Proyecto_II_Server_CE2103.dir/depend.internal" afterDir="false" />
@@ -19,11 +55,10 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Proyecto_II_Server_CE2103" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Proyecto_II_Server_CE2103" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BPGame/BPManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/BPGame/BPManager.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BPGame/Components/Ball.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/BPGame/Components/Ball.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BPGame/Components/Field.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/BPGame/Components/Field.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BPGame/Components/GameSettings.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/BPGame/Components/GameSettings.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BPGame/Pathfinding/Pathfinding.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/BPGame/Pathfinding/Pathfinding.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BPGame/Components/Box/BoundBox.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/BPGame/Components/Box/BoundBox.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BPGame/Components/Box/Box.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/BPGame/Components/Box/Box.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BPGame/Pathfinding/Route.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/BPGame/Pathfinding/Route.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/util/Json.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/Json.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +97,11 @@
     <property name="cidr.known.project.marker" value="true" />
     <property name="cmake.loaded.for.project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
