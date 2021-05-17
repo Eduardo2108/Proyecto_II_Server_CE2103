@@ -19,8 +19,8 @@ using namespace std;
 class Field {
 private:
     Matrix *matrix;
-    int length = 9;
-    int height = 18;
+    int length = 18;
+    int height = 9;
 
 public:
     Field() {
@@ -32,15 +32,39 @@ public:
     void generateField(int obstacles) {
 
         for (int i = 1; i <= this->length; i++) {
-            matrix->add(1, i, new BoundBox());
-            matrix->add(this->height, i, new BoundBox());
+            BoundBox *bound1 = new BoundBox();
+            BoundBox *bound2 = new BoundBox();
+            bound1->setRow(1);
+            bound1->setColumn(i);
+
+            bound2->setRow(this->height);
+            bound2->setColumn(i);
+
+            matrix->add(1, i, bound1);
+            matrix->add(this->height, i, bound2);
         }
         for (int i = 1; i <= this->height; i++) {
             if (i <= 6 and i >= 4) {
-                matrix->add(i, 1, new GoalLineBox());
-                matrix->add(i, this->length, new GoalLineBox());
+                BoundBox *goal1 = new BoundBox();
+                BoundBox *goal2 = new BoundBox();
+                goal1->setRow(i);
+                goal1->setColumn(1);
+
+                goal2->setRow(i);
+                goal2->setColumn(this->length);
+
+                matrix->add(i, 1, goal1);
+                matrix->add(i, this->length, goal2);
             } else {
-                matrix->add(i, 1, new BoundBox());
+                BoundBox *bound1 = new BoundBox();
+                BoundBox *bound2 = new BoundBox();
+                bound1->setRow(i);
+                bound1->setColumn(1);
+
+                bound2->setRow(i);
+                bound2->setColumn(this->height);
+
+                matrix->add(i, 1, bound1);
                 matrix->add(i, this->length, new BoundBox());
             }
         }

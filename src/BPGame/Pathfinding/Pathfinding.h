@@ -90,6 +90,8 @@ class Pathfinding {
 public:
     static Route *calculateShoot(Shoot *shoot, Field *field, Ball *ball) {
         Matrix *matrix = field->getMatrix();
+        matrix->show();
+
         //SET THE BALL MOVEMENT
         setMovement(ball, shoot);
         int column = ball->getColumn();
@@ -116,31 +118,28 @@ public:
             Box *box = matrix->get(row, column);
             if (dynamic_cast<NormalBox *>(box) == nullptr) {
                 if (dynamic_cast<GoalLineBox *>(box) != nullptr) {
-                    cout << "La casilla siguiente es de gol: " << endl;
                     cerr << "siiiiiiiiiiiiiiiiuuuuuuuuuuuuuuuuuuuuuuuu" << endl;
-                    box->show();
+                    route->addStep(box);
+                    break;
+
                 }
                 if (dynamic_cast<ObstacleBox *>(box) != nullptr) {
                     cout << "La casilla siguiente es de obstaculo: " << endl;
-                    box->show();
                 }
                 if (dynamic_cast<BoundBox *>(box) != nullptr) {
                     cout << "La casilla siguiente es de limite: " << endl;
-                    box->show();
+                    route->addStep(box);
+                    break;
+
                 }
-                route->addStep(box);
-                break;
             } else {
-                cout << "La casilla siguiente es normal: " << endl;
-                box->show();
                 route->addStep(box);
             }
-
-
         }
         matrix->get(row, column)->setHasBall(true);
-        cout << "Final Ball x position: " << column << endl;
-        cout << "Final Ball y position: " << row << endl;
+        ball->setColumn(column);
+        ball->setRow(row);
+        matrix->show();
         return route;
     }
 
