@@ -94,28 +94,12 @@ public:
 
         //SET THE BALL MOVEMENT
         setMovement(ball, shoot);
-        int column = ball->getColumn();
-        int row = ball->getRow();
-        int x_movement = ball->getXMovement();
-        int y_movement = ball->getYMovement();
+        int column = ball->getColumn() + 1;
+        int row = ball->getRow() + 1;
+
         auto *route = new Route();
         field->setBall(false, row, column);
-        while (x_movement != 0 or y_movement != 0) {
-            if (x_movement < 0) {
-                column--;
-                x_movement++;
-            } else if (x_movement > 0) {
-                column++;
-                x_movement--;
-            }
-            if (y_movement < 0) {
-                row++;
-                y_movement++;
-            } else if (y_movement > 0) {
-                row--;
-                y_movement--;
-            }
-
+        while (ball->getXMovement() != 0 or ball->getYMovement() != 0) {
             Box *box = matrix->get(row, column);
             if (dynamic_cast<NormalBox *>(box) == nullptr) {
                 if (dynamic_cast<GoalLineBox *>(box) != nullptr) {
@@ -125,7 +109,12 @@ public:
 
                 }
                 if (dynamic_cast<ObstacleBox *>(box) != nullptr) {
-                    cout << "La casilla siguiente es de obstaculo: " << endl;
+                    cout << "La casilla siguiente es de obstaculo" << endl;
+                    ball->invert_x_movement();
+                    ball->invert_y_movement();
+                    ball->updateMovement();
+
+
                 }
                 if (dynamic_cast<BoundBox *>(box) != nullptr) {
                     cout << "La casilla siguiente es de limite: " << endl;
@@ -135,11 +124,12 @@ public:
                 }
             } else {
                 route->addStep(box);
+                ball->updateMovement();
             }
+            row = ball->getNextRow();
+            column = ball->getNextColumn();
         }
-        matrix->get(row, column)->setHasBall(true);
-        ball->setColumn(column);
-        ball->setRow(row);
+        matrix->get(ball->getRow(), ball->getColumn())->setHasBall(true);
         matrix->show();
         return route;
     }

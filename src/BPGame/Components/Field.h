@@ -47,14 +47,25 @@ public:
             if (i <= 6 and i >= 4) {
                 GoalLineBox *goal1 = new GoalLineBox();
                 GoalLineBox *goal2 = new GoalLineBox();
+                ObstacleBox *ob1;
+
+                ob1 = new ObstacleBox();
+
+
                 goal1->setRow(i);
                 goal1->setColumn(1);
-
                 goal2->setRow(i);
                 goal2->setColumn(this->length);
 
+
+                ob1->setRow(i);
+                ob1->setColumn(9);
+
+
                 matrix->add(i, 1, goal1);
                 matrix->add(i, this->length, goal2);
+                matrix->add(i, 9, ob1);
+
             } else {
                 BoundBox *bound1 = new BoundBox();
                 BoundBox *bound2 = new BoundBox();

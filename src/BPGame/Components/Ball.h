@@ -62,6 +62,42 @@ public:
     void setColumn(int column) {
         Ball::column = column;
     }
+
+    void updateMovement() {
+        if (x_movement < 0) {
+            column--;
+            x_movement++;
+        } else if (x_movement > 0) {
+            column++;
+            x_movement--;
+        }
+        if (y_movement < 0) {
+            row++;
+            y_movement++;
+        } else if (y_movement > 0) {
+            row--;
+            y_movement--;
+        }
+
+
+    }
+
+    void invert_y_movement() {
+        this->y_movement = this->y_movement * -1;
+
+    }
+
+    void invert_x_movement() {
+        this->x_movement = this->x_movement * -1;
+
+    }
+
+    int getNextRow() {
+        return (this->x_movement > 0) ? (this->row - 1) : (this->row + 1);
+    }
+    int getNextColumn() {
+        return (this->y_movement > 0) ? (this->column - 1) : (this->column + 1);
+    }
 };
 
 
