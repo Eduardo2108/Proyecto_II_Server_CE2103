@@ -38,6 +38,10 @@ public:
         //set ball position in the Field.
         this->field->setBall(true, ball->getRow(), ball->getColumn());
     }
+
+    Field *getField() {
+        return this->field;
+    }
 };
 
 

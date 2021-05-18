@@ -94,38 +94,31 @@ public:
 
         //SET THE BALL MOVEMENT
         setMovement(ball, shoot);
-        int column = ball->getColumn() + 1;
-        int row = ball->getRow() + 1;
+        int column = ball->getNextColumn();
+        int row = ball->getNextRow();
 
         auto *route = new Route();
         field->setBall(false, row, column);
+
         while (ball->getXMovement() != 0 or ball->getYMovement() != 0) {
             Box *box = matrix->get(row, column);
             if (dynamic_cast<NormalBox *>(box) == nullptr) {
                 if (dynamic_cast<GoalLineBox *>(box) != nullptr) {
-                    cerr << "siiiiiiiiiiiiiiiiuuuuuuuuuuuuuuuuuuuuuuuu" << endl;
                     route->addStep(box);
                     break;
-
                 }
                 if (dynamic_cast<ObstacleBox *>(box) != nullptr) {
-                    cout << "La casilla siguiente es de obstaculo" << endl;
                     ball->invert_x_movement();
                     ball->invert_y_movement();
-                    ball->updateMovement();
-
-
                 }
                 if (dynamic_cast<BoundBox *>(box) != nullptr) {
-                    cout << "La casilla siguiente es de limite: " << endl;
                     route->addStep(box);
                     break;
-
                 }
             } else {
                 route->addStep(box);
-                ball->updateMovement();
             }
+            ball->updateMovement();
             row = ball->getNextRow();
             column = ball->getNextColumn();
         }

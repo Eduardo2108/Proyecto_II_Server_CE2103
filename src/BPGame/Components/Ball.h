@@ -92,11 +92,16 @@ public:
 
     }
 
-    int getNextRow() {
-        return (this->x_movement > 0) ? (this->row - 1) : (this->row + 1);
+    int getNextColumn() const {
+        if (this->x_movement == 0)
+            return this->column;
+        return (this->x_movement > 0) ? (this->column + 1) : (this->column - 1);
     }
-    int getNextColumn() {
-        return (this->y_movement > 0) ? (this->column - 1) : (this->column + 1);
+
+    int getNextRow() const {
+        if (this->y_movement == 0)
+            return this->row;
+        return (this->y_movement > 0) ? (this->row - 1) : (this->row + 1);
     }
 };
 

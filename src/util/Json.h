@@ -7,8 +7,8 @@
 
 #include "../../lib/rapidjson/stringbuffer.h"
 #include "../../lib/rapidjson/writer.h"
-#include "vector"
 #include "../../lib/rapidjson/document.h"
+#include "Response.h"
 
 using namespace std;
 using namespace rapidjson;
@@ -27,8 +27,15 @@ public:
         return strbuf.GetString();
     }
 
-    static string convertBox(Box *box) {
+    static string convertResponse(Response *response) {
+        Document generated_json;
+        generated_json.SetArray();
+        Document::AllocatorType &allocator = generated_json.GetAllocator();
+        StringBuffer strbuf;
+        Writer<rapidjson::StringBuffer> writer(strbuf);
+        response->Serialize(&writer);
 
+        return strbuf.GetString();
     }
 };
 

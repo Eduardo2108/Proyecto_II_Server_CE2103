@@ -2,16 +2,20 @@
 #include "src/util/Json.h"
 
 int main() {
-    GameSettings *settings = new GameSettings();
+    auto *settings = new GameSettings();
     settings->setPlayer1Name("Edu")->setPlayer2Name("Jose")->setObstacles(19)->setMaxGoals(3);
-    BPManager *bp = new BPManager(settings);
+    auto *bp = new BPManager(settings);
     auto *shoot = new Shoot();
-    shoot->setStrength(7);
+    shoot->setStrength(10);
     shoot->setDirX(1);
     shoot->setDirY(0);
 
+    auto *r = new Response();
 
     Route *route = bp->shoot(shoot);
-    cout << Json::convertRoute(route);
+    r->setMessage(Json::convertRoute(route));
+    r->setLog("Log of server");
+    r->setStatusCode(20);
+    cout << Json::convertResponse(r);
     return 0;
 }

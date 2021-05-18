@@ -41,4 +41,5 @@ CMakeFiles/Proyecto_II_Server_CE2103.dir/main.cpp.o: ../src/BPGame/Pathfinding/R
 CMakeFiles/Proyecto_II_Server_CE2103.dir/main.cpp.o: ../src/BPGame/Structures/LinkedList.h
 CMakeFiles/Proyecto_II_Server_CE2103.dir/main.cpp.o: ../src/BPGame/Structures/Matrix.h
 CMakeFiles/Proyecto_II_Server_CE2103.dir/main.cpp.o: ../src/util/Json.h
+CMakeFiles/Proyecto_II_Server_CE2103.dir/main.cpp.o: ../src/util/Response.h
 

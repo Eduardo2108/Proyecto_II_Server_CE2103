@@ -329,8 +329,18 @@ LinkedList.h
 /home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/lib/rapidjson/stringbuffer.h
 ../../lib/rapidjson/writer.h
 /home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/lib/rapidjson/writer.h
-vector
-/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/src/util/vector
 ../../lib/rapidjson/document.h
 /home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/lib/rapidjson/document.h
+Response.h
+/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/src/util/Response.h
+
+/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/src/util/Response.h
+../../lib/rapidjson/rapidjson.h
+/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/lib/rapidjson/rapidjson.h
+../../lib/rapidjson/document.h
+/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/lib/rapidjson/document.h
+../../lib/rapidjson/writer.h
+/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/lib/rapidjson/writer.h
+../../lib/rapidjson/stringbuffer.h
+/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/lib/rapidjson/stringbuffer.h
 

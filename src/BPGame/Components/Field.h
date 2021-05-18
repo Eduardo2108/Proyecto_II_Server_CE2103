@@ -79,6 +79,7 @@ public:
                 matrix->add(i, this->length, new BoundBox());
             }
         }
+
     }
 
     void show() {
