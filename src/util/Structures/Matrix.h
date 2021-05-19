@@ -2,11 +2,11 @@
 // Created by eduardozumbadog on 5/14/21.
 //
 #include "LinkedList.h"
-#include "../Components/Box/Box.h"
-#include "../Components/Box/NormalBox.h"
-#include "../Components/Box/ObstacleBox.h"
-#include "../Components/Box/GoalLineBox.h"
-#include "../Components/Box/BoundBox.h"
+#include "../../BPGame/Components/Box/Box.h"
+#include "../../BPGame/Components/Box/NormalBox.h"
+#include "../../BPGame/Components/Box/ObstacleBox.h"
+#include "../../BPGame/Components/Box/GoalLineBox.h"
+#include "../../BPGame/Components/Box/BoundBox.h"
 
 #ifndef BACKEND_MATRIX_H
 #define BACKEND_MATRIX_H

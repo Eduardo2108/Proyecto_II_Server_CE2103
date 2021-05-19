@@ -7,7 +7,7 @@
 
 #include "Route.h"
 #include "string"
-#include "../Structures/Matrix.h"
+#include "../../util/Structures/Matrix.h"
 #include "../Components/Ball.h"
 #include "../Components/Field.h"
 
@@ -37,6 +37,32 @@ public:
 
     void setDirY(int dirY) {
         dir_y = dirY;
+    }
+
+    bool Deserialize(const rapidjson::Value &obj) {
+
+        this->setDirX(obj["dir_x"].GetInt());
+        this->setDirY(obj["dir_y"].GetInt());
+        this->setStrength(obj["strength"].GetInt());
+
+
+        return true;
+    }
+
+    bool Serialize(rapidjson::Writer<rapidjson::StringBuffer> *writer) {
+
+        writer->StartObject();
+
+        writer->String("dir_x");
+        writer->Int(this->dir_x);
+        writer->String("dir_y");
+        writer->Int(this->dir_y);
+        writer->String("strength");
+        writer->Int(this->strength);
+
+        writer->EndObject();
+
+        return true;
     }
 
 private:

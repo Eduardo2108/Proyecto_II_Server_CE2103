@@ -5,7 +5,7 @@
 #ifndef PROYECTO_II_SERVER_CE2103_ROUTE_H
 #define PROYECTO_II_SERVER_CE2103_ROUTE_H
 
-#include "../Structures/LinkedList.h"
+#include "../../util/Structures/LinkedList.h"
 #include "../Components/Box/Box.h"
 
 class Route {

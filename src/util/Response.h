@@ -55,8 +55,7 @@ public:
         return true;
     }
 
-private:
-    bool Deserialize(const rapidjson::Value &obj) {
+     bool Deserialize(const rapidjson::Value &obj) {
 
         this->setStatusCode(obj["status"].GetInt());
         this->setLog(obj["log"].GetString());

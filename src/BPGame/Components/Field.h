@@ -12,7 +12,7 @@
 #include "Box/GoalLineBox.h"
 #include "Box/BoundBox.h"
 #include "string"
-#include "../Structures/Matrix.h"
+#include "../../util/Structures/Matrix.h"
 
 using namespace std;
 
