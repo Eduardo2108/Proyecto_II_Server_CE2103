@@ -15,10 +15,11 @@ private:
 public:
     bool Deserialize(const std::string &s) {
         rapidjson::Document doc;
+        doc.Parse(s.c_str());
         if (!doc.IsArray())
             return false;
         for (rapidjson::Value::ConstValueIterator itr = doc.Begin(); itr != doc.End(); ++itr) {
-            Box *p;
+            Box *p = new Box();
             p->Deserialize(*itr);
             this->route->append(p);
         }
@@ -38,7 +39,7 @@ public:
 
     };
 
-     LinkedList<Box *> *getRoute()  {
+    LinkedList<Box *> *getRoute() {
         return route;
     }
 
@@ -57,7 +58,7 @@ public:
     void show() {
         cout << "---- Route ----" << endl;
         for (int i = 0; i < this->route->len; ++i) {
-            cout << i+1 << " --> ";
+            cout << i + 1 << " --> ";
             route->get(i)->show();
         }
         cout << "---- ---- ----" << endl;

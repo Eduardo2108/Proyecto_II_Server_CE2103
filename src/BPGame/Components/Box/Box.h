@@ -20,8 +20,8 @@ private:
     int pos_y;
 
     //
-    int row;
-    int column;
+    int row = INT16_MAX;
+    int column = INT16_MAX;
     bool hasBall = false;
 public:
     bool isHasBall() const {

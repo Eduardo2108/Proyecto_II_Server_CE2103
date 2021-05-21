@@ -16,6 +16,11 @@ int main() {
     r->setMessage(Json::convertRoute(route));
     r->setLog("Log of server");
     r->setStatusCode(20);
-    cout << Json::convertResponse(r);
+    string str = Json::convertResponse(r);
+    Response *r2 = new Response();
+    r2->Deserialize(str);
+    Route *route2 = new Route();
+    route2->Deserialize(r2->getMessage());
+
     return 0;
 }

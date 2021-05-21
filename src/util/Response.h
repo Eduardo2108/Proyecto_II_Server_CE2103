@@ -9,6 +9,7 @@
 #include "../../lib/rapidjson/document.h"
 #include "../../lib/rapidjson/writer.h"
 #include "../../lib/rapidjson/stringbuffer.h"
+
 class Response {
 private:
     string log;
@@ -39,7 +40,7 @@ public:
         Response::statusCode = statusCode;
     }
 
-    bool Serialize(rapidjson::Writer <rapidjson::StringBuffer> *writer) {
+    bool Serialize(rapidjson::Writer<rapidjson::StringBuffer> *writer) {
         writer->StartObject();
 
         writer->String("status");
@@ -55,8 +56,9 @@ public:
         return true;
     }
 
-     bool Deserialize(const rapidjson::Value &obj) {
-
+    bool Deserialize(string str) {
+        rapidjson::Document obj;
+        obj.Parse(str.c_str());
         this->setStatusCode(obj["status"].GetInt());
         this->setLog(obj["log"].GetString());
         this->setMessage(obj["message"].GetString());
