@@ -4,7 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/main.cpp" "/home/eduardozumbadog/Desktop/Proyecto_II_Server_CE2103/cmake-build-debug/CMakeFiles/Proyecto_II_Server_CE2103.dir/main.cpp.o"
+  "/home/josea4718/Desktop/Proyecto II/Servidor/Proyecto_II_Server_CE2103/main.cpp" "/home/josea4718/Desktop/Proyecto II/Servidor/Proyecto_II_Server_CE2103/cmake-build-debug/CMakeFiles/Proyecto_II_Server_CE2103.dir/main.cpp.o"
+  "/home/josea4718/Desktop/Proyecto II/Servidor/Proyecto_II_Server_CE2103/src/BPGame/BPManager.cpp" "/home/josea4718/Desktop/Proyecto II/Servidor/Proyecto_II_Server_CE2103/cmake-build-debug/CMakeFiles/Proyecto_II_Server_CE2103.dir/src/BPGame/BPManager.cpp.o"
+  "/home/josea4718/Desktop/Proyecto II/Servidor/Proyecto_II_Server_CE2103/src/Socket/Server.cpp" "/home/josea4718/Desktop/Proyecto II/Servidor/Proyecto_II_Server_CE2103/cmake-build-debug/CMakeFiles/Proyecto_II_Server_CE2103.dir/src/Socket/Server.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
