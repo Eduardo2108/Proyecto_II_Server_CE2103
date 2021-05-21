@@ -39,8 +39,9 @@ public:
         dir_y = dirY;
     }
 
-    bool Deserialize(const rapidjson::Value &obj) {
-
+    bool Deserialize(string str) {
+        rapidjson::Document obj;
+        obj.Parse(str.c_str());
         this->setDirX(obj["dir_x"].GetInt());
         this->setDirY(obj["dir_y"].GetInt());
         this->setStrength(obj["strength"].GetInt());
@@ -116,7 +117,6 @@ class Pathfinding {
 public:
     static Route *calculateShoot(Shoot *shoot, Field *field, Ball *ball) {
         Matrix *matrix = field->getMatrix();
-        matrix->show();
 
         //SET THE BALL MOVEMENT
         setMovement(ball, shoot);
@@ -149,7 +149,6 @@ public:
             column = ball->getNextColumn();
         }
         matrix->get(ball->getRow(), ball->getColumn())->setHasBall(true);
-        matrix->show();
         return route;
     }
 

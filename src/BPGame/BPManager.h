@@ -11,6 +11,7 @@
 #include "Components/GameSettings.h"
 #include "Pathfinding/Route.h"
 #include "Pathfinding/Pathfinding.h"
+#include <mutex>
 
 class BPManager {
 private:
@@ -19,12 +20,10 @@ private:
     Ball *ball;
     int max_goals;
     Field *field;
+    static BPManager *instance;
+    static std::mutex mutex_;
 
-public:
-    Route *shoot(Shoot *shoot) {
-        return Pathfinding::calculateShoot(shoot, this->field, this->ball);
-
-    }
+    BPManager() {};
 
     explicit BPManager(GameSettings *settings) {
         //Initialize variables.
@@ -39,10 +38,29 @@ public:
         this->field->setBall(true, ball->getRow(), ball->getColumn());
     }
 
+public:
+
+    Route *shoot(Shoot *shoot) {
+        return Pathfinding::calculateShoot(shoot, this->field, this->ball);
+
+    }
+
+
     Field *getField() {
         return this->field;
     }
+
+    static BPManager *getInstance(GameSettings *settings = nullptr);
 };
 
+BPManager *BPManager::instance{nullptr};
+std::mutex BPManager::mutex_;
+
+BPManager *BPManager::getInstance(GameSettings *settings) {
+    std::lock_guard<std::mutex> lock(mutex_);
+    if (BPManager::instance == nullptr)
+        instance = new BPManager(settings);
+    return instance;
+}
 
 #endif //PROYECTO_II_SERVER_CE2103_BPMANAGER_H

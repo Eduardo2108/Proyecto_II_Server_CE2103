@@ -42,18 +42,16 @@ public:
         writer->String("request");
         writer->String(this->getRequest().c_str());
 
-
         writer->EndObject();
 
         return true;
     }
 
-    bool Deserialize(const rapidjson::Value &obj) {
-
+    bool Deserialize(const string& string1) {
+        rapidjson::Document obj;
+        obj.Parse(string1.c_str());
         this->setBody(obj["body"].GetString());
         this->setRequest(obj["request"].GetString());
-
-
 
         return true;
     }
