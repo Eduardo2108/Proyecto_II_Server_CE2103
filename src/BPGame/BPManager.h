@@ -53,14 +53,6 @@ public:
     static BPManager *getInstance(GameSettings *settings = nullptr);
 };
 
-BPManager *BPManager::instance{nullptr};
-std::mutex BPManager::mutex_;
 
-BPManager *BPManager::getInstance(GameSettings *settings) {
-    std::lock_guard<std::mutex> lock(mutex_);
-    if (BPManager::instance == nullptr)
-        instance = new BPManager(settings);
-    return instance;
-}
 
 #endif //PROYECTO_II_SERVER_CE2103_BPMANAGER_H
