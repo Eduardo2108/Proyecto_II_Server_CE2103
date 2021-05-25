@@ -12,7 +12,7 @@
 class ServerManager {
 
 public:
-    static string processRequest(const string &json_request) {
+    static string processRequest(const string json_request) {
 
         auto *settings = new GameSettings();
         settings->setPlayer1Name("Edu")->setPlayer2Name("Jose")->setObstacles(19)->setMaxGoals(3);

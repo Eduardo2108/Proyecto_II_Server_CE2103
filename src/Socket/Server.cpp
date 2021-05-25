@@ -84,12 +84,12 @@ int Server::InitServer() {
         if (bytesReceived == 0) {
             cout << ("Client disconnected, exiting program...") << endl;
             cout << "Client disconnected " << endl;
-            break;
+            continue;
         }
 
         client_message = string(buf, 0, bytesReceived);
         if (!client_message.empty()) {
-            cout << ("Message recieved: " + client_message);
+            cout << ("Message recieved: " + client_message) << endl;
             const string &response = ServerManager::processRequest(client_message);
             Send(response.c_str());
         }
