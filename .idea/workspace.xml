@@ -13,7 +13,11 @@
   <component name="ChangeListManager">
     <list default="true" id="6679694b-912e-4db3-bfc7-0e1511d1650c" name="Default Changelist" comment="Generate Json on Response.h and Route.h">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Proyecto_II_Server_CE2103" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Proyecto_II_Server_CE2103" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BPGame/Components/Ball.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/BPGame/Components/Ball.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BPGame/Pathfinding/Pathfinding.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/BPGame/Pathfinding/Pathfinding.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Socket/Server.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Socket/Server.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +52,7 @@
     <property name="cf.first.check.clang-format" value="false" />
     <property name="cidr.known.project.marker" value="true" />
     <property name="cmake.loaded.for.project" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Cliente/Proyecto_II_Client_CE2103-" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -59,11 +63,6 @@
   </component>
   <component name="RunManager">
     <configuration name="Proyecto_II_Server_CE2103" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Proyecto_II_Server_CE2103" TARGET_NAME="Proyecto_II_Server_CE2103" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Proyecto_II_Server_CE2103" RUN_TARGET_NAME="Proyecto_II_Server_CE2103">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -86,7 +85,8 @@
       <workItem from="1621309177173" duration="4731000" />
       <workItem from="1621314109480" duration="162000" />
       <workItem from="1621318224216" duration="623000" />
-      <workItem from="1621920473497" duration="4975000" />
+      <workItem from="1621920473497" duration="5113000" />
+      <workItem from="1622080973321" duration="10117000" />
     </task>
     <task id="LOCAL-00001" summary="Generate Json on Response.h and Route.h">
       <created>1621313842529</created>

@@ -163,8 +163,8 @@ public:
             ball_move_y = strength * shoot->getDirY();
         } else {
             //CASO DE MOVIMIENTO DIAGONAL
-            ball_move_x = (strength / 2) * shoot->getDirX();
-            ball_move_y = (strength / 2) * shoot->getDirY();
+            ball_move_x = (strength/2) * shoot->getDirX();
+            ball_move_y = (strength/2) * shoot->getDirY();
         }
         ball->setXMovement(ball_move_x);
         ball->setYMovement(ball_move_y);

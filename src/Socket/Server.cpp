@@ -84,7 +84,7 @@ int Server::InitServer() {
         if (bytesReceived == 0) {
             cout << ("Client disconnected, exiting program...") << endl;
             cout << "Client disconnected " << endl;
-            continue;
+            break;
         }
 
         client_message = string(buf, 0, bytesReceived);

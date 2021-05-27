@@ -18,7 +18,7 @@ private:
     //posicion en i
     int row = 5;
     // posicion en j
-    int column = 2;
+    int column = 9;
 public:
     int getYMovement() const {
         return y_movement;
