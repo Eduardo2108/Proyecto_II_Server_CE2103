@@ -131,6 +131,8 @@ public:
             if (dynamic_cast<NormalBox *>(box) == nullptr) {
                 if (dynamic_cast<GoalLineBox *>(box) != nullptr) {
                     route->addStep(box);
+                    ball->setRow(5);
+                    ball->setColumn(9);
                     break;
                 }
                 if (dynamic_cast<ObstacleBox *>(box) != nullptr) {
@@ -148,7 +150,8 @@ public:
             row = ball->getNextRow();
             column = ball->getNextColumn();
         }
-        matrix->get(ball->getRow(), ball->getColumn())->setHasBall(true);
+        Box *pBox = matrix->get(ball->getRow(), ball->getColumn());
+        pBox->setHasBall(true);
         return route;
     }
 
