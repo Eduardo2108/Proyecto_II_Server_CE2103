@@ -13,6 +13,8 @@
 #include "Box/BoundBox.h"
 #include "string"
 #include "../../util/Structures/Matrix.h"
+#include "../Pathfinding/Route.h"
+#include <cstdio>
 
 using namespace std;
 
@@ -29,11 +31,50 @@ public:
         this->matrix = new Matrix(this->height, this->length);
     }
 
-    void generateField(int obstacles) {
+    Route *generateObstacles(int obstacles) {
+        auto route = new Route();
+        int randomRow;
+        int randomColumnLeft;
+        int randomColumnRight;
+        int randomOffset;
+        srand(time(0));
 
+        for (int i = 1; i <= obstacles; i++) {
+            auto *obstacleBox = new ObstacleBox();
+            auto *obstacleBox2 = new ObstacleBox();
+
+
+            randomRow = rand() % 8 + 2;
+            randomOffset = rand() % 6 + 2;
+            randomColumnLeft = 8 - randomOffset;
+            randomColumnRight = 9 + randomOffset;
+
+
+            cerr << "Fila aleatoria " << to_string(randomRow) << endl;
+            cerr << "Columnas aleatorias " << to_string(randomColumnLeft) << " " << to_string(randomColumnRight)
+                 << endl;
+            obstacleBox->setRow(randomRow);
+            obstacleBox->setColumn(randomColumnLeft);
+
+            obstacleBox2->setRow(randomRow);
+            obstacleBox2->setColumn(randomColumnRight);
+
+//
+//            matrix->add(randomRow, randomColumnLeft, obstacleBox);
+//            matrix->add(randomRow, randomColumnRight, obstacleBox2);
+
+
+            route->addStep(obstacleBox);
+            route->addStep(obstacleBox2);
+        }
+        return route;
+    }
+
+    void generateField(int obstacles) {
+        // upper and lower bounds.
         for (int i = 1; i <= this->length; i++) {
-            BoundBox *bound1 = new BoundBox();
-            BoundBox *bound2 = new BoundBox();
+            auto *bound1 = new BoundBox();
+            auto *bound2 = new BoundBox();
             bound1->setRow(1);
             bound1->setColumn(i);
 
@@ -43,43 +84,29 @@ public:
             matrix->add(1, i, bound1);
             matrix->add(this->height, i, bound2);
         }
+        // left and right bounds, and goal lines.
         for (int i = 1; i <= this->height; i++) {
             if (i <= 6 and i >= 4) {
-                GoalLineBox *goal1 = new GoalLineBox();
-                GoalLineBox *goal2 = new GoalLineBox();
-                ObstacleBox *ob1;
-
-                ob1 = new ObstacleBox();
-
-
+                auto *goal1 = new GoalLineBox();
+                auto *goal2 = new GoalLineBox();
                 goal1->setRow(i);
                 goal1->setColumn(1);
                 goal2->setRow(i);
                 goal2->setColumn(this->length);
-
-
-                ob1->setRow(i);
-                ob1->setColumn(9);
-
-
                 matrix->add(i, 1, goal1);
                 matrix->add(i, this->length, goal2);
-                matrix->add(i, 9, ob1);
 
             } else {
-                BoundBox *bound1 = new BoundBox();
-                BoundBox *bound2 = new BoundBox();
+                auto *bound1 = new BoundBox();
+                auto *bound2 = new BoundBox();
                 bound1->setRow(i);
                 bound1->setColumn(1);
-
                 bound2->setRow(i);
                 bound2->setColumn(this->height);
-
                 matrix->add(i, 1, bound1);
                 matrix->add(i, this->length, new BoundBox());
             }
         }
-
     }
 
     void show() {

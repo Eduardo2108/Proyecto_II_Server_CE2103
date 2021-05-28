@@ -50,9 +50,10 @@ public:
         return this->field;
     }
 
+
+
     static BPManager *getInstance(GameSettings *settings = nullptr);
 };
-
 
 
 #endif //PROYECTO_II_SERVER_CE2103_BPMANAGER_H

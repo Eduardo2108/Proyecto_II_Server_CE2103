@@ -33,6 +33,15 @@ public:
                 r->setStatusCode(200);
                 result = Json::convertResponse(r);
             }
+        } else if (msg->getRequest() == "obstacles") {
+            int obstacles = stoi(msg->getBody());
+            Route *route = BPManager::getInstance()->getField()->generateObstacles(obstacles);
+            string str = Json::convertRoute(route);
+            auto *r = new Response();
+            r->setMessage(str);
+            r->setLog("Log of server");
+            r->setStatusCode(200);
+            result = Json::convertResponse(r);
         }
         return result;
     }
