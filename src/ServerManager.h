@@ -17,6 +17,8 @@ public:
         auto *settings = new GameSettings();
         settings->setPlayer1Name("Edu")->setPlayer2Name("Jose")->setObstacles(19)->setMaxGoals(3);
 
+        BPManager::getInstance(settings);
+
         auto *msg = new Message();
         msg->Deserialize(json_request);
         string result;
@@ -43,6 +45,7 @@ public:
             r->setStatusCode(200);
             result = Json::convertResponse(r);
         }
+        cerr << result<< endl;
         return result;
     }
 };

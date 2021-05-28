@@ -44,10 +44,10 @@ public:
             auto *obstacleBox2 = new ObstacleBox();
 
 
-            randomRow = rand() % 8 + 2;
+            randomRow = rand() % 7 + 2;
             randomOffset = rand() % 6 + 2;
-            randomColumnLeft = 8 - randomOffset;
-            randomColumnRight = 9 + randomOffset;
+            randomColumnLeft = 9 - randomOffset;
+            randomColumnRight = 10 + randomOffset;
 
 
             cerr << "Fila aleatoria " << to_string(randomRow) << endl;
@@ -59,9 +59,9 @@ public:
             obstacleBox2->setRow(randomRow);
             obstacleBox2->setColumn(randomColumnRight);
 
-//
-//            matrix->add(randomRow, randomColumnLeft, obstacleBox);
-//            matrix->add(randomRow, randomColumnRight, obstacleBox2);
+
+             matrix->add(randomRow, randomColumnLeft, obstacleBox);
+             matrix->add(randomRow, randomColumnRight, obstacleBox2);
 
 
             route->addStep(obstacleBox);
