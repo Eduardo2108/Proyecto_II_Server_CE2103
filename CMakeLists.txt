@@ -18,4 +18,4 @@ add_executable(Proyecto_II_Server_CE2103 main.cpp
         src/ServerManager.h
         src/util/Message.h
         src/Socket/Server.h
-        src/Socket/Server.cpp src/BPGame/BPManager.cpp)
+        src/Socket/Server.cpp src/BPGame/BPManager.cpp src/BPGame/Pathfinding/StarAux.h src/BPGame/Pathfinding/A_Star.h)

@@ -47,6 +47,10 @@ public:
         this->route->append(box);
     }
 
+    void addFirst(Box *box) {
+        this->route->addFirst(box);
+    }
+
     Box *getFirst() {
         return this->route->get(0);
     }

@@ -10,6 +10,7 @@
 #include "../../util/Structures/Matrix.h"
 #include "../Components/Ball.h"
 #include "../Components/Field.h"
+#include "StarAux.h"
 
 class Shoot {
     int strength;
@@ -114,6 +115,26 @@ private:
 };
 
 class Pathfinding {
+
+
+    static void setMovement(Ball *ball, Shoot *shoot) {
+        int strength = shoot->getStrength();
+        int ball_move_x;
+        int ball_move_y;
+        // ASIGNAR M0VIMIENTO AL BALÓN
+        //caso de movimiento normal.
+        if (!shoot->getDirX() or !shoot->getDirY()) {
+            ball_move_x = strength * shoot->getDirX();
+            ball_move_y = strength * shoot->getDirY();
+        } else {
+            //CASO DE MOVIMIENTO DIAGONAL
+            ball_move_x = (strength / 2) * shoot->getDirX();
+            ball_move_y = (strength / 2) * shoot->getDirY();
+        }
+        ball->setXMovement(ball_move_x);
+        ball->setYMovement(ball_move_y);
+    }
+
 public:
     static Route *calculateShoot(Shoot *shoot, Field *field, Ball *ball) {
         Matrix *matrix = field->getMatrix();
@@ -153,24 +174,6 @@ public:
         Box *pBox = matrix->get(ball->getRow(), ball->getColumn());
         pBox->setHasBall(true);
         return route;
-    }
-
-    static void setMovement(Ball *ball, Shoot *shoot) {
-        int strength = shoot->getStrength();
-        int ball_move_x;
-        int ball_move_y;
-        // ASIGNAR M0VIMIENTO AL BALÓN
-        //caso de movimiento normal.
-        if (!shoot->getDirX() or !shoot->getDirY()) {
-            ball_move_x = strength * shoot->getDirX();
-            ball_move_y = strength * shoot->getDirY();
-        } else {
-            //CASO DE MOVIMIENTO DIAGONAL
-            ball_move_x = (strength/2) * shoot->getDirX();
-            ball_move_y = (strength/2) * shoot->getDirY();
-        }
-        ball->setXMovement(ball_move_x);
-        ball->setYMovement(ball_move_y);
     }
 };
 

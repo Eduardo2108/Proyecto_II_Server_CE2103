@@ -1,7 +1,9 @@
+#include <climits>
 #include "src/BPGame/BPManager.h"
 #include "src/util/Json.h"
 #include "src/ServerManager.h"
 #include "src/Socket/Server.h"
+#include "src/BPGame/Pathfinding/A_Star.h"
 
 int main() {
     /*
@@ -19,7 +21,7 @@ int main() {
 
     cout << str;
     */
-    Server::GetInstance()->InitServer();
-
+    // Server::GetInstance()->InitServer();
+    A_Star *star = new A_Star();
     return 0;
 }

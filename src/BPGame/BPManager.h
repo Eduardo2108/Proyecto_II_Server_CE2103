@@ -50,7 +50,9 @@ public:
         return this->field;
     }
 
+    Route *aStar(Path path) {
 
+    }
 
     static BPManager *getInstance(GameSettings *settings = nullptr);
 };

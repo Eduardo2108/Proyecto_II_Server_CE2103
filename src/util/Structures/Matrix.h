@@ -86,7 +86,7 @@ public:
 
     Box *get(int row, int column) {
         Box *result;
-        if (this->rows == 0 and this->columns == 0)
+        if ((this->rows == 0 and this->columns == 0) or row> this->rows or column > this->columns)
             result = nullptr;
         else {
             for (int i = 0; i < row; i++) {

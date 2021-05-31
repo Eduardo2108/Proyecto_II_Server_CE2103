@@ -79,6 +79,15 @@ public:
         return os;
     }
 
+    bool operator==(const Box &rhs) const {
+        return row == rhs.row &&
+               column == rhs.column;
+    }
+
+    bool operator!=(const Box &rhs) const {
+        return !(rhs == *this);
+    }
+
 public:
     int getPosX() const {
         return pos_x;

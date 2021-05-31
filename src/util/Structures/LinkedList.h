@@ -54,6 +54,7 @@ public:
         this->len = 0;
         this->tail = NULL;
     }
+
     /**>
      * Method for deleting a Node of the list.
      * @tparam T Generic data type, must have equal operator.
@@ -109,6 +110,18 @@ public:
         }
     }
 
+    void addFirst(T element) {
+        Node<T> *newElement = new Node<T>(element);
+        if (this->head == nullptr) {
+            this->head = newElement;
+            this->len++;
+        } else {
+            newElement->setNext(this->head);
+            this->head = newElement;
+            this->len++;
+        }
+    }
+
     /**>
      * Method for showing the list on the console.
      */
@@ -145,6 +158,10 @@ public:
 
         }
         return tmp->getValue();
+    }
+
+    int getLen() const {
+        return len;
     }
 };
 
