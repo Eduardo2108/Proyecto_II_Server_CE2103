@@ -124,7 +124,7 @@ public:
         writer->String("start_x");
         writer->Int(this->getStartX());
         writer->String("start_y");
-        writer->Int(this->getStartX());
+        writer->Int(this->getStartY());
 
 
         writer->String("end_x");

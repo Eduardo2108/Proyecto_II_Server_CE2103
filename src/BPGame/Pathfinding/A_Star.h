@@ -11,8 +11,8 @@
 
 class A_Star {
 private:
-    LinkedList<StarAux *> *openList;
-    LinkedList<StarAux *> *closedList;
+    LinkedList<StarAux *> *openList = new LinkedList<StarAux *>();
+    LinkedList<StarAux *> *closedList = new LinkedList<StarAux *>();
     //fixme inicializar esto valores
     int finish_x;
     int finish_y;
@@ -20,7 +20,6 @@ private:
     static A_Star *pinstance_;
 
     static std::mutex mutex_;
-
 
 
 public:
@@ -52,17 +51,18 @@ public:
 
         for (int i = -1; i < 2; i++) {
             for (int j = -1; j < 2; j++) {
-                Box *temp = BPManager::getInstance()->getField()->getMatrix()->get(actualRow + i, actualColumn + j);
-                if (i != 0 and j != 0 && !temp && dynamic_cast<ObstacleBox *>(temp) == nullptr) {
 
+                if (i == 0 && j == 0) continue;
+                Box *temp = BPManager::getInstance()->getField()->getMatrix()->get(actualRow + i, actualColumn + j);
+
+                if (temp != nullptr && dynamic_cast<ObstacleBox *>(temp) == nullptr) {
                     int index = this->findOpenList(temp);
                     int movement_cost = ((abs(i) == abs(j)) ? 14 : 10);
 
                     if (index == -1) {
                         auto *newElement = new StarAux();
-                        int distance = this->calculateDistance(newElement);
-
                         newElement->setBox(temp);
+                        int distance = this->calculateDistance(newElement);
                         newElement->setPredecessor(current->getBox());
                         newElement->setWeight(current->getWeight() + movement_cost);
                         newElement->setDistanceH(distance);
@@ -166,12 +166,11 @@ public:
             route->addFirst(endPoint->getBox());
             endPoint = this->findClosedList(endPoint->getPredecessor());
         }
+        return route;
 
     }
 
 };
-
-
 
 
 #endif //PROYECTO_II_SERVER_CE2103_A_STAR_H

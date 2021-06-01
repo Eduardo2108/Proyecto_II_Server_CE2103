@@ -54,7 +54,7 @@ public:
 
                 auto *star = new A_Star();
                 Route *route = star->aStar(path);
-
+                route->show();
                 string str = Json::convertRoute(route);
                 auto *r = new Response();
 
