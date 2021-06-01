@@ -65,6 +65,19 @@ public:
         return strbuf.GetString();
     }
 
+
+    static string convertPath(Path *path) {
+        Document generated_json;
+        generated_json.SetArray();
+        Document::AllocatorType &allocator = generated_json.GetAllocator();
+        StringBuffer strbuf;
+        Writer<rapidjson::StringBuffer> writer(strbuf);
+        path->Serialize(&writer);
+
+        return strbuf.GetString();
+
+    }
+
     /**
      * @brief Convert from Shoot.h to string json.
      * @param response instance to convert
