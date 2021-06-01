@@ -23,6 +23,7 @@ private:
     static BPManager *instance;
     static std::mutex mutex_;
 
+
     BPManager() {};
 
     explicit BPManager(GameSettings *settings) {
@@ -48,10 +49,6 @@ public:
 
     Field *getField() {
         return this->field;
-    }
-
-    Route *aStar(Path path) {
-
     }
 
     static BPManager *getInstance(GameSettings *settings = nullptr);

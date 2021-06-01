@@ -10,7 +10,6 @@
 #include "../../util/Structures/Matrix.h"
 #include "../Components/Ball.h"
 #include "../Components/Field.h"
-#include "StarAux.h"
 
 class Shoot {
     int strength;
@@ -106,6 +105,36 @@ public:
 
     void setEndY(int endY) {
         end_y = endY;
+    }
+
+    bool Deserialize(const string &basicString) {
+        rapidjson::Document obj;
+        obj.Parse(basicString.c_str());
+        this->setStartX(obj["start_x"].GetInt());
+        this->setStartY(obj["start_y"].GetInt());
+
+        this->setEndX(obj["end_x"].GetInt());
+        this->setEndY(obj["end_y"].GetInt());
+        return true;
+    }
+
+    bool Serialize(rapidjson::Writer<rapidjson::StringBuffer> *writer) {
+        writer->StartObject();
+
+        writer->String("start_x");
+        writer->Int(this->getStartX());
+        writer->String("start_y");
+        writer->Int(this->getStartX());
+
+
+        writer->String("end_x");
+        writer->Int(this->getEndX());
+        writer->String("end_y");
+        writer->Int(this->getEndY());
+
+        writer->EndObject();
+
+        return true;
     }
 
 private:

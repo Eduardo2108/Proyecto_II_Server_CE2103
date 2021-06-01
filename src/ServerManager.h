@@ -8,10 +8,14 @@
 #include "BPGame/BPManager.h"
 #include "util/Json.h"
 #include "BPGame/Pathfinding/Route.h"
+#include "BPGame/Pathfinding/A_Star.h"
 
 class ServerManager {
+private:
+
 
 public:
+
     static string processRequest(const string json_request) {
 
         auto *settings = new GameSettings();
@@ -44,11 +48,26 @@ public:
             r->setLog("Log of server");
             r->setStatusCode(200);
             result = Json::convertResponse(r);
+        } else if (msg->getRequest() == "star") {
+            auto *path = new Path();
+            if (path->Deserialize(msg->getBody())) {
+
+                auto *star = new A_Star();
+                Route *route = star->aStar(path);
+
+                string str = Json::convertRoute(route);
+                auto *r = new Response();
+
+                r->setMessage(str);
+                r->setLog("Log of server");
+                r->setStatusCode(200);
+
+                result = Json::convertResponse(r);
+            }
+            cerr << result << endl;
+            return result;
         }
-        cerr << result<< endl;
-        return result;
     }
 };
-
 
 #endif //PROYECTO_II_SERVER_CE2103_SERVERMANAGER_H

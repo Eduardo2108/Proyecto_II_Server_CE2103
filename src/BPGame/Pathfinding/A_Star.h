@@ -6,6 +6,7 @@
 #define PROYECTO_II_SERVER_CE2103_A_STAR_H
 
 #include "../BPManager.h"
+#include "StarAux.h"
 #include <cmath>
 
 class A_Star {
@@ -16,7 +17,14 @@ private:
     int finish_x;
     int finish_y;
 
+    static A_Star *pinstance_;
+
+    static std::mutex mutex_;
+
+
+
 public:
+    static A_Star *GetInstance();
 
 /**
  * @brief Method for getting the next element in the open list
@@ -45,7 +53,7 @@ public:
         for (int i = -1; i < 2; i++) {
             for (int j = -1; j < 2; j++) {
                 Box *temp = BPManager::getInstance()->getField()->getMatrix()->get(actualRow + i, actualColumn + j);
-                if (!temp and (i != 0 and j != 0)) {
+                if (i != 0 and j != 0 && !temp && dynamic_cast<ObstacleBox *>(temp) == nullptr) {
 
                     int index = this->findOpenList(temp);
                     int movement_cost = ((abs(i) == abs(j)) ? 14 : 10);
@@ -127,10 +135,10 @@ public:
         }
     }
 
-    Route *aStar(Path path) {
+    Route *aStar(Path *path) {
         // Inicializacion del algoritmo
-        Box *f = BPManager::getInstance()->getField()->getMatrix()->get(path.getEndX(), path.getEndY());
-        Box *s = BPManager::getInstance()->getField()->getMatrix()->get(path.getStartX(), path.getStartY());
+        Box *f = BPManager::getInstance()->getField()->getMatrix()->get(path->getEndX(), path->getEndY());
+        Box *s = BPManager::getInstance()->getField()->getMatrix()->get(path->getStartX(), path->getStartY());
         this->finish_x = f->getColumn();
         this->finish_y = f->getRow();
 
@@ -145,14 +153,14 @@ public:
         this->openList->append(start);
 
         //inicializacion de variables
-        StarAux *current;
+        StarAux *current = this->getNext();;
         while (current->getBox() != f) {
             //obtener el siguiente
             current = this->getNext();
             //obtener los que estan cerca
             this->extend(current);
         }
-        Route *route = new Route();
+        auto *route = new Route();
         StarAux *endPoint = this->findClosedList(f);
         while (endPoint->getPredecessor() != nullptr) {
             route->addFirst(endPoint->getBox());
@@ -162,5 +170,8 @@ public:
     }
 
 };
+
+
+
 
 #endif //PROYECTO_II_SERVER_CE2103_A_STAR_H

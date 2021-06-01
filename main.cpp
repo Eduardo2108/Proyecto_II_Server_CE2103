@@ -6,7 +6,6 @@
 #include "src/BPGame/Pathfinding/A_Star.h"
 
 int main() {
-    /*
     auto *settings = new GameSettings();
     settings->setPlayer1Name("Edu")->setPlayer2Name("Jose")->setObstacles(19)->setMaxGoals(3);
     BPManager::getInstance(settings);
@@ -20,8 +19,7 @@ int main() {
     string str = ServerManager::processRequest(Json::convertMessage(msg));
 
     cout << str;
-    */
     // Server::GetInstance()->InitServer();
-    A_Star *star = new A_Star();
+    //A_Star *star = new A_Star();
     return 0;
-}
+};
