@@ -190,7 +190,7 @@ public:
                     ball->invert_y_movement();
                 }
                 if (dynamic_cast<BoundBox *>(box) != nullptr) {
-                    route->addStep(box);
+                    //route->addStep(box);
                     break;
                 }
             } else {

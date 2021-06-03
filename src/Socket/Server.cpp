@@ -101,7 +101,7 @@ int Server::InitServer() {
 
 void Server::Send(const char *msg) const {
     int sendRes = send(clientSocket, msg, strlen(msg), 0);
-    cout << ("Message sent: " + string(msg));
+    cout << ("Message sent: " + string(msg)) << endl;
 
     if (sendRes == -1) {
         std::cout << "Send message failed" << std::endl;

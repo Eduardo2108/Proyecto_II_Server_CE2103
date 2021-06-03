@@ -35,7 +35,7 @@ public:
 
                 auto *r = new Response();
                 r->setMessage(str);
-                r->setLog("Log of server");
+                r->setLog("ShotLOG");
                 r->setStatusCode(200);
                 result = Json::convertResponse(r);
             }
@@ -45,7 +45,7 @@ public:
             string str = Json::convertRoute(route);
             auto *r = new Response();
             r->setMessage(str);
-            r->setLog("Log of server");
+            r->setLog("ObsLog");
             r->setStatusCode(200);
             result = Json::convertResponse(r);
         } else if (msg->getRequest() == "star") {
@@ -59,14 +59,14 @@ public:
                 auto *r = new Response();
 
                 r->setMessage(str);
-                r->setLog("Log of server");
+                r->setLog("PathLog");
                 r->setStatusCode(200);
 
                 result = Json::convertResponse(r);
             }
-            cerr << result << endl;
-            return result;
         }
+        cerr << result << endl;
+        return result;
     }
 };
 
