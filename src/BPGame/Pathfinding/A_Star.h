@@ -170,6 +170,31 @@ public:
 
     }
 
+    Shoot *calculateShotAI(Path *path) {
+        Box *start = this->aStar(path)->getFirst();
+        int dir_x = 0;
+        int dir_y = 0;
+        if (path->getStartY() < start->getColumn()) {
+            dir_x = 1;
+        }
+        if (path->getStartY() > start->getColumn()) {
+            dir_x = -1;
+        }
+        if (path->getStartX() < start->getRow()) {
+            dir_y = -1;
+        }
+        if (path->getStartX() > start->getRow()) {
+            dir_y = 1;
+        }
+
+
+        Shoot *result = new Shoot();
+        result->setDirX(dir_x);
+        result->setDirY(dir_y);
+        result->setStrength(10);
+        return result;
+    }
+
 };
 
 
