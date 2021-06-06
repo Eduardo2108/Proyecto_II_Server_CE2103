@@ -127,12 +127,14 @@ public:
      *
      */
     StarAux *findClosedList(Box *box) {
+        StarAux *temp;
         for (int i = 0; i < this->closedList->getLen(); i++) {
             if (closedList->get(i)->getBox() == box) {
-                return closedList->get(i);
-
+                temp = closedList->get(i);
+                break;
             }
         }
+        return temp;
     }
 
 /**

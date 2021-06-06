@@ -28,6 +28,7 @@ public:
 
     GameSettings *setPlayer2Name(const string &player2Name) {
         player2_name = player2Name;
+        return this;
     }
 
     int getMaxGoals() const {
