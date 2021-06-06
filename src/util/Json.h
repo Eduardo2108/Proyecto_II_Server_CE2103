@@ -66,6 +66,11 @@ public:
     }
 
 
+    /**
+     * @brief Convert from Path.h to string json.
+     * @param path instance to convert
+     * @return Json format of the instance.
+     */
     static string convertPath(Path *path) {
         Document generated_json;
         generated_json.SetArray();

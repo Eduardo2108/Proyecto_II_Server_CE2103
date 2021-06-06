@@ -13,6 +13,11 @@ class Route {
 private:
     LinkedList<Box *> *route = new LinkedList<Box *>();
 public:
+    /**
+ * @brief Method for loading the information of a json string into the object
+ * @param obj rapidjson object of the string parsed into a json.
+ * @return true if success
+ */
     bool Deserialize(const std::string &s) {
         rapidjson::Document doc;
         doc.Parse(s.c_str());
@@ -27,6 +32,11 @@ public:
 
     };
 
+/**
+ * @brief Method for loading the object's information into a json
+ * @param writer rapidjson writer instance.
+ * @return true is success.
+ */
     bool Serialize(rapidjson::Writer<rapidjson::StringBuffer> *writer) const {
         writer->StartArray();
 

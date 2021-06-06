@@ -5,7 +5,9 @@
 #ifndef PROYECTO_II_SERVER_CE2103_PLAYER_H
 #define PROYECTO_II_SERVER_CE2103_PLAYER_H
 
-
+/**
+ * @brief This class represents the players of the game.
+ */
 class Player {
 
 };

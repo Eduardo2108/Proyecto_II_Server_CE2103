@@ -7,7 +7,9 @@
 
 #include "Box.h"
 
-
+/**
+ * @brief Class for representing the normal segments in the field.
+ */
 class NormalBox : public Box {
 
 };

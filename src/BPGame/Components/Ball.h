@@ -10,6 +10,9 @@
 
 using namespace std;
 
+/**
+ * @brief Class that represents the ball into the game.
+ */
 class Ball {
 private:
 public:
@@ -63,6 +66,10 @@ public:
         Ball::column = column;
     }
 
+    /**
+     * @brief This method checks the ball x_movement and y_movement fields and updates the ball position
+     * in the proper way.
+     */
     void updateMovement() {
         if (x_movement < 0) {
             column--;
@@ -82,22 +89,34 @@ public:
 
     }
 
+    /**
+     * @brief Method used for collisions, inverts the vertical movement.
+     */
     void invert_y_movement() {
         this->y_movement = this->y_movement * -1;
 
     }
 
+    /**
+     * @brief Method used for collisions, inverts the horizontal movement.
+     */
     void invert_x_movement() {
         this->x_movement = this->x_movement * -1;
 
     }
 
+    /**
+     * @brief Method for calculating the next column in the matrix
+     */
     int getNextColumn() const {
         if (this->x_movement == 0)
             return this->column;
         return (this->x_movement > 0) ? (this->column + 1) : (this->column - 1);
     }
 
+    /**
+     * @brief Method for calculating the next row in the matrix
+     */
     int getNextRow() const {
         if (this->y_movement == 0)
             return this->row;

@@ -135,6 +135,11 @@ public:
         }
     }
 
+/**
+ * @brief this method calculates the pathfinding A* algorithm in the matrix
+ * @param path an instance containing the start and ending points.
+ * @return the fastest route between the points.
+ */
     Route *aStar(Path *path) {
         // Inicializacion del algoritmo
         Box *f = BPManager::getInstance()->getField()->getMatrix()->get(path->getEndX(), path->getEndY());
@@ -170,6 +175,14 @@ public:
 
     }
 
+/**
+ * @brief This method calculates pathfinding and then uses the result to calculate a direction for the AI to shot.
+ * the strength is a constant value.
+ *
+ * @param path receives the position of the AI and the goal line on which it has to score.
+ *
+ * @return a Shoot instance with the values of the shot.
+ */
     Shoot *calculateShotAI(Path *path) {
         Box *start = this->aStar(path)->getFirst();
         int dir_x = 0;

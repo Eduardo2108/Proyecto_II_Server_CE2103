@@ -6,7 +6,11 @@
 #define BACKEND_GOALLINEBOX_H
 #include "Box.h"
 
-
+/**
+ *
+ * @brief Class for representing the goal line segments in the field.
+ *
+ */
 class GoalLineBox: public Box{
 
 };

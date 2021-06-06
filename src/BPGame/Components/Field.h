@@ -18,6 +18,9 @@
 
 using namespace std;
 
+/**
+ * @brief This class represents the field of the game, its used to control the logic of the movement of the ball and obstacles.
+ */
 class Field {
 private:
     Matrix *matrix;
@@ -31,6 +34,11 @@ public:
         this->matrix = new Matrix(this->height, this->length);
     }
 
+/**
+ * @brief This method generates random obstacles, equally divided on both sides.
+ * @param obstacles number of obstacles on each side
+ * @return a list of the obstacles, and its positions.
+ */
     Route *generateObstacles(int obstacles) {
         auto route = new Route();
         int randomRow;
@@ -60,8 +68,8 @@ public:
             obstacleBox2->setColumn(randomColumnRight);
 
 
-             matrix->add(randomRow, randomColumnLeft, obstacleBox);
-             matrix->add(randomRow, randomColumnRight, obstacleBox2);
+            matrix->add(randomRow, randomColumnLeft, obstacleBox);
+            matrix->add(randomRow, randomColumnRight, obstacleBox2);
 
 
             route->addStep(obstacleBox);
@@ -70,7 +78,10 @@ public:
         return route;
     }
 
-    void generateField(int obstacles) {
+/**
+ * @brief This method generates the field itself, includes the bounds and the goal lines.
+ */
+    void generateField() {
         // upper and lower bounds.
         for (int i = 1; i <= this->length; i++) {
             auto *bound1 = new BoundBox();
@@ -117,10 +128,15 @@ public:
     Matrix *getMatrix() {
         return this->matrix;
     }
-
-    void setBall(bool hasBall, int row, int column) {
-        matrix->get(row, column)->setHasBall(hasBall);
-    }
+/**
+ * @brief This method changes the state of a box to say if whether or not has the ball.
+ * @param hasBall
+ * @param row
+ * @param column
+ */
+   void setBall(bool hasBall, int row, int column) {
+       matrix->get(row, column)->setHasBall(hasBall);
+   }
 };
 
 

@@ -12,7 +12,9 @@
 #include "Pathfinding/Route.h"
 #include "Pathfinding/Pathfinding.h"
 #include <mutex>
-
+/**
+ * @brief This class provides an API to the logics of BP Game.
+ */
 class BPManager {
 private:
     Player *player_1;
@@ -34,13 +36,17 @@ private:
         this->player_2 = new Player();
         //Configure game with user's choices.
         this->max_goals = settings->getMaxGoals();
-        this->field->generateField(settings->getObstacles());
+        this->field->generateField();
         //set ball position in the Field.
         this->field->setBall(true, ball->getRow(), ball->getColumn());
     }
 
 public:
-
+/**
+ * @brief Method for calculating a shot from the user or the AI
+ * @param shoot information with the strength and direction of the shot.
+ * @return The path of the ball.
+ */
     Route *shoot(Shoot *shoot) {
         return Pathfinding::calculateShoot(shoot, this->field, this->ball);
 

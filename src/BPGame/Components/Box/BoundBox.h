@@ -6,7 +6,9 @@
 #define BACKEND_BOUNDBOX_H
 
 #include "Box.h"
-
+/**
+ * @brief Class that represents the borders of the field
+ */
 class BoundBox : public Box {
 
 };

@@ -10,6 +10,7 @@
 #include "../../lib/rapidjson/document.h"
 #include "../../lib/rapidjson/writer.h"
 #include "../../lib/rapidjson/stringbuffer.h"
+
 using namespace std;
 
 class Message {
@@ -34,7 +35,12 @@ public:
     }
 
 public:
-    bool Serialize(rapidjson::Writer <rapidjson::StringBuffer> *writer) {
+    /**
+ * @brief Method for loading the object's information into a json
+ * @param writer rapidjson writer instance.
+ * @return true is success.
+ */
+    bool Serialize(rapidjson::Writer<rapidjson::StringBuffer> *writer) {
         writer->StartObject();
 
         writer->String("body");
@@ -47,7 +53,12 @@ public:
         return true;
     }
 
-    bool Deserialize(const string& string1) {
+    /**
+ * @brief Method for loading the information of a json string into the object
+ * @param string1 rapidjson object of the string parsed into a json.
+ * @return true if success
+ */
+    bool Deserialize(const string &string1) {
         rapidjson::Document obj;
         obj.Parse(string1.c_str());
         this->setBody(obj["body"].GetString());

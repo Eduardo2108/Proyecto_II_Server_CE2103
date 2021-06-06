@@ -8,7 +8,9 @@ using namespace std;
 
 #include <climits>
 #include "../Components/Box/Box.h"
-
+/**
+ * @brief This class is used for the calculation of paths using pathfinding.
+ */
 class StarAux {
 private:
     int weight = INT_MAX;
@@ -55,7 +57,7 @@ public:
 
     }
 
-     Box *getPredecessor() {
+    Box *getPredecessor() {
         return predecessor;
     }
 

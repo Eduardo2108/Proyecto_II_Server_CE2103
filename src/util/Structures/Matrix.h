@@ -11,7 +11,11 @@
 #ifndef BACKEND_MATRIX_H
 #define BACKEND_MATRIX_H
 
-
+/**
+ * @brief This class represents a matrix of Box.h objects.
+ *
+ * Its 1-index based.
+ */
 class Matrix {
 
 private:
@@ -53,7 +57,11 @@ public:
             matrix_row->append(element, column - 1);
         }
     }
-
+/**
+ * @brief Method used for printing the matrix in the console.
+ * @param c box to print
+ * @return an character, depending on the type of box.
+ */
     string getBoxType(Box *c) {
         string temp;
         if (dynamic_cast<GoalLineBox *>(c) != nullptr) {
@@ -83,7 +91,12 @@ public:
             }
         }
     }
-
+/**
+ * @brief This method returns an item in a given position in a matrix.
+ * @param row row in the matrix
+ * @param column column in the matrix
+ * @return the element in that position, or nullptr if invalid positions.
+ */
     Box *get(int row, int column) {
         Box *result;
         if ((this->rows == 0 and this->columns == 0) or row> this->rows or column > this->columns)

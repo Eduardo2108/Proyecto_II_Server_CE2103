@@ -15,7 +15,11 @@ private:
 
 
 public:
-
+/**
+ * @brief This method process the information from the socket and gives an response.
+ * @param json_request string of the Message.h instance.
+ * @return an json format Response.h instance.
+ */
     static string processRequest(const string json_request) {
 
         auto *settings = new GameSettings();

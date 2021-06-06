@@ -107,6 +107,11 @@ public:
         end_y = endY;
     }
 
+/**
+ * @brief Method for loading the information of a json string into the object
+ * @param obj rapidjson object of the string parsed into a json.
+ * @return true if success
+ */
     bool Deserialize(const string &basicString) {
         rapidjson::Document obj;
         obj.Parse(basicString.c_str());
@@ -118,6 +123,11 @@ public:
         return true;
     }
 
+/**
+ * @brief Method for loading the object's information into a json
+ * @param writer rapidjson writer instance.
+ * @return true is success.
+ */
     bool Serialize(rapidjson::Writer<rapidjson::StringBuffer> *writer) {
         writer->StartObject();
 
@@ -145,7 +155,11 @@ private:
 
 class Pathfinding {
 
-
+/**
+ * @brief Method for giving the ball movement, based on the strength and direction the user selected
+ * @param ball instance of the ball
+ * @param shoot instance containing the information of the shot.
+ */
     static void setMovement(Ball *ball, Shoot *shoot) {
         int strength = shoot->getStrength();
         int ball_move_x;
@@ -165,6 +179,13 @@ class Pathfinding {
     }
 
 public:
+    /**
+     * @brief Method for calculating a shot, it counts the collisions and bound lines.
+     * @param shoot instance containing the shot information
+     * @param field instance of the field, it has an Matrix
+     * @param ball instance of the ball
+     * @return a list of boxes, which is the path the ball follows.
+     */
     static Route *calculateShoot(Shoot *shoot, Field *field, Ball *ball) {
         Matrix *matrix = field->getMatrix();
 
