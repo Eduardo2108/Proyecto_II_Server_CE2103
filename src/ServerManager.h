@@ -64,8 +64,8 @@ public:
 
                 result = Json::convertResponse(r);
             }
-            cerr << result << endl;
-            return result;
+
+
         } else if (msg->getRequest() == "ai_shot") {
             auto *path = new Path();
             if (path->Deserialize(msg->getBody())) {
@@ -73,7 +73,9 @@ public:
                 auto *star = new A_Star();
                 Shoot *shot = star->calculateShotAI(path);
 
+
                 string str = Json::convertShot(shot);
+                cout << "SHOT GENERATED: " + str << endl;
                 auto *r = new Response();
 
                 r->setMessage(str);

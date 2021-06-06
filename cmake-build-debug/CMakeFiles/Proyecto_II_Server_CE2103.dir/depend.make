@@ -36,8 +36,10 @@ CMakeFiles/Proyecto_II_Server_CE2103.dir/main.cpp.o: ../src/BPGame/Components/Bo
 CMakeFiles/Proyecto_II_Server_CE2103.dir/main.cpp.o: ../src/BPGame/Components/Field.h
 CMakeFiles/Proyecto_II_Server_CE2103.dir/main.cpp.o: ../src/BPGame/Components/GameSettings.h
 CMakeFiles/Proyecto_II_Server_CE2103.dir/main.cpp.o: ../src/BPGame/Components/Player.h
+CMakeFiles/Proyecto_II_Server_CE2103.dir/main.cpp.o: ../src/BPGame/Pathfinding/A_Star.h
 CMakeFiles/Proyecto_II_Server_CE2103.dir/main.cpp.o: ../src/BPGame/Pathfinding/Pathfinding.h
 CMakeFiles/Proyecto_II_Server_CE2103.dir/main.cpp.o: ../src/BPGame/Pathfinding/Route.h
+CMakeFiles/Proyecto_II_Server_CE2103.dir/main.cpp.o: ../src/BPGame/Pathfinding/StarAux.h
 CMakeFiles/Proyecto_II_Server_CE2103.dir/main.cpp.o: ../src/ServerManager.h
 CMakeFiles/Proyecto_II_Server_CE2103.dir/main.cpp.o: ../src/Socket/Server.h
 CMakeFiles/Proyecto_II_Server_CE2103.dir/main.cpp.o: ../src/util/Json.h
@@ -120,8 +122,10 @@ CMakeFiles/Proyecto_II_Server_CE2103.dir/src/Socket/Server.cpp.o: ../src/BPGame/
 CMakeFiles/Proyecto_II_Server_CE2103.dir/src/Socket/Server.cpp.o: ../src/BPGame/Components/Field.h
 CMakeFiles/Proyecto_II_Server_CE2103.dir/src/Socket/Server.cpp.o: ../src/BPGame/Components/GameSettings.h
 CMakeFiles/Proyecto_II_Server_CE2103.dir/src/Socket/Server.cpp.o: ../src/BPGame/Components/Player.h
+CMakeFiles/Proyecto_II_Server_CE2103.dir/src/Socket/Server.cpp.o: ../src/BPGame/Pathfinding/A_Star.h
 CMakeFiles/Proyecto_II_Server_CE2103.dir/src/Socket/Server.cpp.o: ../src/BPGame/Pathfinding/Pathfinding.h
 CMakeFiles/Proyecto_II_Server_CE2103.dir/src/Socket/Server.cpp.o: ../src/BPGame/Pathfinding/Route.h
+CMakeFiles/Proyecto_II_Server_CE2103.dir/src/Socket/Server.cpp.o: ../src/BPGame/Pathfinding/StarAux.h
 CMakeFiles/Proyecto_II_Server_CE2103.dir/src/Socket/Server.cpp.o: ../src/ServerManager.h
 CMakeFiles/Proyecto_II_Server_CE2103.dir/src/Socket/Server.cpp.o: ../src/Socket/Server.cpp
 CMakeFiles/Proyecto_II_Server_CE2103.dir/src/Socket/Server.cpp.o: ../src/Socket/Server.h

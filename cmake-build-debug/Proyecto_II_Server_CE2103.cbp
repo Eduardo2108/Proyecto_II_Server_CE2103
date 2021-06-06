@@ -103,10 +103,16 @@
 		<Unit filename="/home/josea4718/Desktop/Proyecto II/Servidor/Proyecto_II_Server_CE2103/src/BPGame/Components/Player.h">
 			<Option target="Proyecto_II_Server_CE2103"/>
 		</Unit>
+		<Unit filename="/home/josea4718/Desktop/Proyecto II/Servidor/Proyecto_II_Server_CE2103/src/BPGame/Pathfinding/A_Star.h">
+			<Option target="Proyecto_II_Server_CE2103"/>
+		</Unit>
 		<Unit filename="/home/josea4718/Desktop/Proyecto II/Servidor/Proyecto_II_Server_CE2103/src/BPGame/Pathfinding/Pathfinding.h">
 			<Option target="Proyecto_II_Server_CE2103"/>
 		</Unit>
 		<Unit filename="/home/josea4718/Desktop/Proyecto II/Servidor/Proyecto_II_Server_CE2103/src/BPGame/Pathfinding/Route.h">
+			<Option target="Proyecto_II_Server_CE2103"/>
+		</Unit>
+		<Unit filename="/home/josea4718/Desktop/Proyecto II/Servidor/Proyecto_II_Server_CE2103/src/BPGame/Pathfinding/StarAux.h">
 			<Option target="Proyecto_II_Server_CE2103"/>
 		</Unit>
 		<Unit filename="/home/josea4718/Desktop/Proyecto II/Servidor/Proyecto_II_Server_CE2103/src/ServerManager.h">

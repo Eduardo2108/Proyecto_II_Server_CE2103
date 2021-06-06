@@ -191,7 +191,7 @@ public:
         Shoot *result = new Shoot();
         result->setDirX(dir_x);
         result->setDirY(dir_y);
-        result->setStrength(10);
+        result->setStrength(70);
         return result;
     }
 
