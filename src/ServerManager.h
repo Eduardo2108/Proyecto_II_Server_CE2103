@@ -64,6 +64,24 @@ public:
 
                 result = Json::convertResponse(r);
             }
+            cerr << result << endl;
+            return result;
+        } else if (msg->getRequest() == "ai_shot") {
+            auto *path = new Path();
+            if (path->Deserialize(msg->getBody())) {
+
+                auto *star = new A_Star();
+                Shoot *shot = star->calculateShotAI(path);
+
+                string str = Json::convertShot(shot);
+                auto *r = new Response();
+
+                r->setMessage(str);
+                r->setLog("Calculated shot for AI");
+                r->setStatusCode(200);
+
+                result = Json::convertResponse(r);
+            }
         }
         cerr << result << endl;
         return result;
