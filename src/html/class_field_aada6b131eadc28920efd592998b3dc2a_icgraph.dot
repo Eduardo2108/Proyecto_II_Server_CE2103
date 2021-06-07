@@ -1,0 +1,16 @@
+digraph "Field::setBall"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="Field::setBall",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="This method changes the state of a box to say if whether or not has the ball."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Pathfinding::calculateShoot",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_pathfinding.html#a50d2a83eee1b955bda740eb316939944",tooltip="Method for calculating a shot, it counts the collisions and bound lines."];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="BPManager::shoot",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_b_p_manager.html#a6de771f0739f86deb5ff71cd8b615d7d",tooltip="Method for calculating a shot from the user or the AI."];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="ServerManager::processRequest",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_server_manager.html#ab32ee6937a72e821b1985f2648b1351b",tooltip="This method process the information from the socket and gives an response."];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Server::InitServer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_server.html#a02b029dcb6f2dc46dfcc8785a616682f",tooltip=" "];
+}

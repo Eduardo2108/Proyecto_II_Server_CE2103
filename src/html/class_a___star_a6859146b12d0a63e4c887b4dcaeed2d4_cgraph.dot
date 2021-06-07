@@ -1,0 +1,22 @@
+digraph "A_Star::extend"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="A_Star::extend",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Method for getting the 8 boxes next to the one that's being processed."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="LinkedList::append",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_linked_list.html#a9942ec5c5a9019f719ec055cdb3b83f1",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="A_Star::calculateDistance",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_a___star.html#ac88f7ddad714ece758e06b6b23572d5a",tooltip="Method for calculating the heuristic distance."];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="LinkedList::del",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_linked_list.html#a07bf7128d5015e176a80fbb35958cd87",tooltip=" "];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="A_Star::findOpenList",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_a___star.html#a7ddd41ea7b3ad584243e511306d9fc79",tooltip="Search in the open list if there's an element with the given box."];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="LinkedList::get",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_linked_list.html#a76d26f9fc7b344dc1d5bb81b853ae96e",tooltip=" "];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="Matrix::get",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_matrix.html#a1e0aa6d20e6a754c70a06986aa8ab2c1",tooltip="This method returns an item in a given position in a matrix."];
+  Node7 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

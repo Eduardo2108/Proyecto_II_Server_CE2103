@@ -12,6 +12,7 @@
 #include "Pathfinding/Route.h"
 #include "Pathfinding/Pathfinding.h"
 #include <mutex>
+
 /**
  * @brief This class provides an API to the logics of BP Game.
  */
@@ -26,7 +27,7 @@ private:
     static std::mutex mutex_;
 
 
-    BPManager() {};
+    BPManager() = default;
 
     explicit BPManager(GameSettings *settings) {
         //Initialize variables.

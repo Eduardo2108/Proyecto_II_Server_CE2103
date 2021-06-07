@@ -1,0 +1,10 @@
+digraph "ServerManager::processRequest"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="ServerManager::processRequest",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="This method process the information from the socket and gives an response."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Server::InitServer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_server.html#a02b029dcb6f2dc46dfcc8785a616682f",tooltip=" "];
+}

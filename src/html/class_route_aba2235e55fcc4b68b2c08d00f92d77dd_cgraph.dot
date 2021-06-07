@@ -1,0 +1,12 @@
+digraph "Route::Deserialize"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Route::Deserialize",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Method for loading the information of a json string into the object."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="LinkedList::append",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_linked_list.html#a9942ec5c5a9019f719ec055cdb3b83f1",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Box::Deserialize",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_box.html#aa99a925f1200a132afe6ce6b71456dae",tooltip="Method for loading the information of a json string into the object."];
+}

@@ -1,0 +1,10 @@
+digraph "Json::convertResponse"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Json::convertResponse",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Convert from Response.h to string json."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Response::Serialize",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_response.html#a972d3d1eb2f4c78c58c5f71a0a50562c",tooltip="Method for loading the object's information into a json."];
+}
